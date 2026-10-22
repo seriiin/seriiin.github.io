@@ -25,4 +25,8 @@ JavaScript syntax, HTML structure/local links, image metadata, supplied CV equal
 
 ## Spatial playground
 
-The blue Canvas drone and scene graph are original, illustrative geometry created for this portfolio. They illustrate spatial playback themes and do not reproduce a measured research result. Controls support orbiting, part selection, assembly steps, replay, and a scene graph overlay. Canvas renders and interactions were verified with the bundled native Canvas renderer; whole-page browser and touch-device verification remains unavailable.
+The Canvas drone and scene graph are original, illustrative geometry created for this portfolio. They illustrate spatial playback themes and do not reproduce a measured research result. Controls support orbiting, part selection, assembly steps, replay, and a scene graph overlay. Canvas renders and interactions were verified with the bundled native Canvas renderer; whole-page browser and touch-device verification remains unavailable.
+
+## Reference palette
+
+The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Styles, the Canvas scene, fallback illustration, favicon, and browser theme use this palette, with neutral tints and a darker text shade for contrast.

@@ -16,6 +16,8 @@
   const reset = document.querySelector("#xr-reset");
   const stepButtons = [...document.querySelectorAll("[data-xr-step]")];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const palette = {"pink": "#e91b63", "blush": "#efb4cf", "yellow": "#f9e975", "lime": "#92c43d", "sky": "#539ed4", "navy": "#222d82"};
+  const partColors = [palette.pink, palette.yellow, palette.lime, palette.sky];
   const steps = [20, 52, 88, 100];
   const stepNames = ["Body", "Arms", "Rotors", "Ready"];
   const state = { yaw: -.55, pitch: .56, progress: 100, graph: false, playing: false, hovered: null, selected: null };
@@ -71,20 +73,21 @@
     const faces = [[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7],[4,5,6,7]];
     faces.map((indices, index) => ({ points: indices.map((i) => corners[i]), index }))
       .sort((a, b) => a.points.reduce((sum, p) => sum + project(p).z, 0) - b.points.reduce((sum, p) => sum + project(p).z, 0))
-      .forEach((face) => path(face.points, selected ? "#0872ba" : "#419fd0", ["#a6dcf5","#72c8ef","#68bce8","#b4e6fa","#d5f2ff"][face.index], selected ? 2 : 1, true));
+      .forEach((face) => path(face.points, selected ? palette.pink : palette.navy, ["#b7d6ed",palette.sky,"#7ab4dd","#d2e5f4","#e6f1f9"][face.index], selected ? 2 : 1, true));
   }
 
-  function rotor(center, selected) {
+  function rotor(center, selected, index) {
+    const color = partColors[index];
     const ring = [];
     for (let i = 0; i < 48; i++) {
       const angle = i / 48 * Math.PI * 2;
       ring.push([center[0] + Math.cos(angle) * 46, center[1], center[2] + Math.sin(angle) * 46]);
     }
-    path(ring, selected ? "#0589dc" : "#4a9bc7", selected ? "rgba(70,184,243,.24)" : "rgba(171,221,248,.18)", selected ? 2.5 : 1.5, true);
+    path(ring, selected ? palette.pink : palette.navy, color + (selected ? "55" : "22"), selected ? 2.5 : 1.5, true);
     const angle = center[0] * .01 + .3;
     const blade = (direction) => [center[0] + Math.cos(angle) * 38 * direction, center[1]+2, center[2] + Math.sin(angle) * 38 * direction];
-    path([blade(-1), blade(1)], "#258dca", null, 6 * project(center).scale);
-    circle([center[0],center[1]+3,center[2]], 7, "#147cb6", "#fff", 1.5);
+    path([blade(-1), blade(1)], color, null, 6 * project(center).scale);
+    circle([center[0],center[1]+3,center[2]], 7, palette.navy, "#fff", 1.5);
   }
 
   function draw() {
@@ -92,23 +95,23 @@
     context.clearRect(0, 0, width, height);
     targets = [];
     const glow = context.createRadialGradient(width*.5,height*.5,10,width*.5,height*.5,width*.6);
-    glow.addColorStop(0,"rgba(157,222,255,.28)");
-    glow.addColorStop(1,"rgba(239,249,255,0)");
+    glow.addColorStop(0,"rgba(83,158,212,.14)");
+    glow.addColorStop(1,"rgba(252,251,253,0)");
     context.fillStyle = glow;
     context.fillRect(0,0,width,height);
 
     // A world-aligned grid keeps the orbit anchored in a spatial coordinate system.
     for (let i=-6; i<=6; i++) {
       const alpha = .25 - Math.abs(i) * .021;
-      path([[-300,-72,i*50],[300,-72,i*50]], `rgba(75,154,202,${alpha})`);
-      path([[i*50,-72,-300],[i*50,-72,300]], `rgba(75,154,202,${alpha})`);
+      path([[-300,-72,i*50],[300,-72,i*50]], `rgba(83,158,212,${alpha})`);
+      path([[i*50,-72,-300],[i*50,-72,300]], `rgba(83,158,212,${alpha})`);
     }
     const origin = [-230,-71,170];
-    path([origin,[-190,-71,170]],"#489dd3",null,1.5);
-    path([origin,[-230,-31,170]],"#87b7d1",null,1.5);
-    path([origin,[-230,-71,130]],"#74c7ef",null,1.5);
+    path([origin,[-190,-71,170]],palette.pink,null,1.5);
+    path([origin,[-230,-31,170]],palette.lime,null,1.5);
+    path([origin,[-230,-71,130]],palette.sky,null,1.5);
     const o = project(origin);
-    context.fillStyle = "#6389a3";
+    context.fillStyle = palette.navy;
     context.font = "9px ui-monospace, monospace";
     context.fillText("0, 0, 0",o.x-10,o.y+15);
 
@@ -120,23 +123,23 @@
       const y = lerp(45,5,assembly(22,52));
       const center = [x*spread,y,z*spread*.7];
       const rotorY = y + lerp(86,16,assembly(56,88));
-      arms.push({center,rotorPoint:[center[0],rotorY,center[2]],depth:project(center).z});
+      arms.push({center,rotorPoint:[center[0],rotorY,center[2]],depth:project(center).z,colorIndex:arms.length});
     }
     const pieces = [
       { depth:project(bodyPoint).z, draw:() => {
         box(bodyPoint,[92,29,64],state.hovered==="Body" || state.selected==="Body");
-        path([[-29,bodyY+16,-17],[29,bodyY+16,-17],[29,bodyY+16,17],[-29,bodyY+16,17]],"#64b8e4","#e9f9ff",1,true);
-        circle([0,bodyY+18,0],7,"#36abea");
+        path([[-29,bodyY+16,-17],[29,bodyY+16,-17],[29,bodyY+16,17],[-29,bodyY+16,17]],palette.sky,"#eef5fb",1,true);
+        circle([0,bodyY+18,0],7,palette.pink);
         targets.push({...project([0,bodyY+15,0]),radius:35,name:"Body",step:0});
       } },
       ...arms.map((arm) => ({ depth:arm.depth, draw:() => {
         const selected = state.hovered==="Arms" || state.selected==="Arms";
         const inner=[Math.sign(arm.center[0])*28,bodyY-1,Math.sign(arm.center[2])*18];
         context.lineCap="round";
-        path([inner,arm.center],selected ? "#1686c8" : "#91c7e2",null,12*project(arm.center).scale);
-        path([inner,arm.center],"#d8f0ff",null,4*project(arm.center).scale);
-        path([arm.center,arm.rotorPoint],"#79b1d1",null,5*project(arm.center).scale);
-        rotor(arm.rotorPoint,state.hovered==="Rotors" || state.selected==="Rotors");
+        path([inner,arm.center],selected ? palette.pink : palette.sky,null,12*project(arm.center).scale);
+        path([inner,arm.center],"#d7e8f5",null,4*project(arm.center).scale);
+        path([arm.center,arm.rotorPoint],palette.navy,null,5*project(arm.center).scale);
+        rotor(arm.rotorPoint,state.hovered==="Rotors" || state.selected==="Rotors",arm.colorIndex);
         const middle=inner.map((v,i)=>(v+arm.center[i])/2);
         targets.push({...project(middle),radius:21,name:"Arms",step:1});
         targets.push({...project(arm.rotorPoint),radius:39,name:"Rotors",step:2});
@@ -146,12 +149,12 @@
 
     if (state.graph) {
       context.setLineDash([4,5]);
-      arms.forEach((arm)=>path([bodyPoint,arm.rotorPoint],"rgba(15,124,191,.65)",null,1));
+      arms.forEach((arm)=>path([bodyPoint,arm.rotorPoint],"rgba(34,45,130,.55)",null,1));
       context.setLineDash([]);
       [bodyPoint,...arms.map((arm)=>arm.rotorPoint)].forEach((point,index)=> {
-        circle(point,7,"#fff","#168bca",1.5);
+        circle(point,7,index===0 ? palette.navy : partColors[index-1],"#fff",1.5);
         const p=project(point);
-        context.fillStyle="#176c9e";
+        context.fillStyle=palette.navy;
         context.font="10px ui-monospace, monospace";
         context.fillText(index===0 ? "origin" : `part_0${index}`,p.x+10,p.y-9);
       });
@@ -162,12 +165,12 @@
     if (selectedTarget) {
       const {x,y,radius,scale}=selectedTarget;
       const r=radius*scale+9;
-      context.strokeStyle="#178dce";
+      context.strokeStyle=palette.pink;
       context.lineWidth=1.3;
       for(const sx of [-1,1]) for(const sy of [-1,1]) {
         context.beginPath();context.moveTo(x+sx*r,y+sy*(r-7));context.lineTo(x+sx*r,y+sy*r);context.lineTo(x+sx*(r-7),y+sy*r);context.stroke();
       }
-      context.fillStyle="#146fa2";
+      context.fillStyle=palette.navy;
       context.font="10px ui-monospace, monospace";
       context.fillText(selectedTarget.name.toUpperCase(),x-r,y-r-9);
     }
