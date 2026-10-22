@@ -4,9 +4,9 @@ Prepared on 2026-10-22 (Asia/Seoul). GitHub Pages repository: https://github.com
 
 ## Supplied by the owner
 
-- `Awesome_CV__1_ (2).pdf`, three pages, dated October 22, 2026. Source for education, professional email, research experience, projects, publications, awards, teaching, and tools. Copied unchanged to `assets/selin-choi-cv.pdf`.
+- `Awesome_CV__1_ (2).pdf`, three pages, dated October 22, 2026. Source for education, professional email, research experience, projects, publications, awards, teaching, and tools. The PDF was removed from the website at the owner's request; it remains a source for the biography content.
 - Google Scholar profile: https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&hl=ko. Direct automated access failed. The profile is linked; citation counts and h-index were not inferred or reproduced.
-- Owner confirmed that **Object-Driven Event Retrieval…** should use **IEEE ISMAR 2026**, as listed by KAIST ARRC, rather than TVCG 2026 (in press), as listed in the supplied CV. The linked original CV is unchanged.
+- Owner confirmed that **Object-Driven Event Retrieval…** should use **IEEE ISMAR 2026**, as listed by KAIST ARRC, rather than TVCG 2026 (in press), as listed in the supplied CV. The original source CV is unchanged.
 
 - On 2026-10-22, the owner reported selection in 2026 for 박사과정생연구장려금지원, funded by 한국연구재단. The supplied English project title is "AI-Driven Learner-Adaptive Spatial Experience Playback Framework in AR/VR Environments". The website uses the descriptive English label "Doctoral Research Grant" and retains the supplied Korean program name. The funder's English name, National Research Foundation of Korea (NRF), is confirmed by https://eng.nrf.re.kr/.
 
@@ -23,7 +23,7 @@ Images show the owner's profile and coauthored research. Images and papers retai
 
 ## Verification scope
 
-JavaScript syntax, HTML structure/local links, image metadata, supplied CV equality, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
+JavaScript syntax, HTML structure/local links, image metadata, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
 
 ## Research portal
 

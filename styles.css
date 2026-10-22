@@ -44,8 +44,6 @@ strong { font-weight: 600; }
 nav { display: flex; align-items: center; gap: 31px; font-size: 13px; }
 nav a { padding-block: 10px; }
 nav a[aria-current="location"] { color: var(--blue); text-decoration: underline; text-decoration-thickness: 2px; }
-.nav-cv { border-left: 1px solid var(--line); padding-left: 26px; }
-.nav-cv span { margin-left: 8px; }
 .menu-toggle { display: none; border: 0; background: transparent; padding: 10px 0 10px 10px; color: var(--ink); font-size: 14px; }
 .menu-toggle span { display: inline-block; margin-left: 14px; font-size: 20px; }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 290px; align-items: center; gap: 85px; padding-block: 88px 80px; }
@@ -237,7 +235,6 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
   .container { width: calc(100% - 48px); }
   .header-inner { min-height: 73px; gap: 15px; }
   nav { gap: 18px; font-size: 12px; }
-  .nav-cv { padding-left: 18px; }
   .hero { grid-template-columns: minmax(0, 1fr) 200px; gap: 30px; padding-block: 55px; }
   h1 { font-size: 54px; }
   .korean-name { flex-basis: 100%; margin-left: 2px; margin-top: 7px; font-size: 12px; }
@@ -280,7 +277,6 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
   nav { width: 100%; flex-wrap: wrap; gap: 4px 20px; padding-block: 0 13px; font-size: 12px; }
   .js nav { display: none; }
   .js nav.is-open { display: flex; }
-  .nav-cv { border-left: 0; padding-left: 0; }
   .hero { grid-template-columns: 1fr; gap: 35px; padding-block: 43px 40px; }
   h1 { font-size: clamp(49px, 13vw, 66px); margin-block: 20px 22px; letter-spacing: -3px; }
   .korean-name { flex-basis: auto; margin-left: 16px; font-size: 13px; }
