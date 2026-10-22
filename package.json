@@ -6,6 +6,6 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/preview.mjs",
-    "check": "node --check main.js && node --check assets/spatial-playground.js && node --check scripts/preview.mjs"
+    "check": "node --check main.js && node --check assets/research-portal.js && node --check scripts/preview.mjs"
   }
 }

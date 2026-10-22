@@ -23,10 +23,10 @@ Images show the owner's profile and coauthored research. Images and papers retai
 
 JavaScript syntax, HTML structure/local links, image metadata, supplied CV equality, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
 
-## Spatial playground
+## Research portal
 
-The Canvas drone and scene graph are original, illustrative geometry created for this portfolio. They illustrate spatial playback themes and do not reproduce a measured research result. Controls support orbiting, part selection, assembly steps, replay, and a scene graph overlay. Canvas renders and interactions were verified with the bundled native Canvas renderer; whole-page browser and touch-device verification remains unavailable.
+The research constellation is an original interactive illustration of six research interests. Its glowing points link to the existing research sources above. It is a playful map of interests, not an evaluated research system. It supports orbiting, topic selection, related research links, connection visibility, and shuffled viewpoints. Nothing animates automatically. Native Canvas rendering and interactions are verified; whole-page browser and touch-device verification remains unavailable.
 
 ## Reference palette
 
-The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Styles, the Canvas scene, fallback illustration, favicon, and browser theme use this palette, with neutral tints and a darker text shade for contrast.
+The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Styles, the research constellation, fallback illustration, favicon, and browser theme use this palette, with neutral tints and a darker text shade for contrast.

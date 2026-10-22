@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
-  <script src="assets/spatial-playground.js" defer></script>
+  <script src="assets/research-portal.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,7 +40,7 @@
         <p class="intro">I study how we can record, understand, and revisit experiences in augmented and virtual reality. My research connects <strong>spatial recording</strong>, <strong>scene graphs</strong>, and <strong>adaptive playback</strong> to help people navigate complex tasks.</p>
         <p class="affiliation">I'm a Ph.D. student in Culture Technology at <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener">KAIST</a>, advised by <a href="https://uvrlab.org/members" target="_blank" rel="noopener">Prof. Woontack Woo</a>.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#playground">Enter the spatial playground <span aria-hidden="true">↘</span></a>
+          <a class="button button-primary" href="#playground">Explore the research portal <span aria-hidden="true">↘</span></a>
           <a class="text-link" href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a>
         </div>
         <div class="research-tags" aria-label="Research interests"><span>AR / VR</span><span>Spatial computing</span><span>Human–computer interaction</span></div>
@@ -56,22 +56,21 @@
     </div>
 
     <section class="xr-playground container" id="playground" aria-labelledby="playground-title">
-      <div class="section-heading"><div><p class="eyebrow">A little space to explore</p><h2 id="playground-title">Don't just watch. <em>Revisit.</em></h2></div><p class="section-aside">An interactive illustration of<br>spatial recording &amp; playback.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">A little space to explore</p><h2 id="playground-title">A window into <em>my research.</em></h2></div><p class="section-aside">Six ideas.<br>One connected space.</p></div>
       <div class="xr-experiment">
         <div class="xr-stage">
-          <div class="xr-stage-heading"><span><i aria-hidden="true"></i> Spatial playback</span><span class="xr-coordinate" aria-hidden="true">SCENE / 001</span></div>
-          <canvas id="spatial-canvas" width="900" height="440" hidden tabindex="0" role="img" aria-label="Interactive 3D drone assembly. Drag to orbit, use arrow keys to rotate, or select a part to revisit its assembly step." aria-describedby="xr-instructions">A drone assembly illustrating spatial playback.</canvas>
-          <div class="xr-fallback"><svg viewBox="0 0 500 280" role="img" aria-label="Illustration of a blue spatial object above a coordinate grid"><g fill="none" stroke="#d6e5f3"><path d="M40 220 250 100 460 220 250 340Z M90 190 300 310 M140 160 350 280 M190 130 400 250 M90 250 300 130 M140 280 350 160 M190 310 400 190"/></g><path d="m170 130 80-45 80 45-80 47Z" fill="#efb4cf" stroke="#222d82"/><path d="M170 130v75l80 46v-74Z" fill="#539ed4" stroke="#222d82"/><path d="M330 130v75l-80 46v-74Z" fill="#f9e975" stroke="#222d82"/><circle cx="250" cy="85" r="5" fill="#222d82"/><circle cx="170" cy="205" r="5" fill="#222d82"/><circle cx="330" cy="205" r="5" fill="#222d82"/></svg><p>Spatial experiences, connected through objects.</p></div>
-          <div class="xr-stage-footer"><p id="xr-instructions">Drag to orbit · Select a part to revisit</p><span class="xr-view-label" aria-hidden="true">↗ 3D VIEW</span></div>
+          <div class="xr-stage-heading"><span><i aria-hidden="true"></i> Research constellation</span><span class="xr-coordinate" aria-hidden="true">PICK AN IDEA</span></div>
+          <canvas id="spatial-canvas" width="900" height="440" hidden tabindex="0" role="img" aria-label="Interactive research constellation. Drag or use arrow keys to orbit. Select a glowing point or use the topic buttons to explore research. Press Home to reset the view." aria-describedby="xr-instructions">Six research ideas connected in a spatial constellation.</canvas>
+          <div class="xr-fallback"><svg viewBox="0 0 500 320" role="img" aria-label="Six colorful research ideas around a spatial portal"><g fill="none" stroke="#539ed4" stroke-width="1.5"><circle cx="250" cy="160" r="100"/><ellipse cx="250" cy="160" rx="130" ry="43" transform="rotate(-24 250 160)"/><ellipse cx="250" cy="160" rx="48" ry="120" transform="rotate(-24 250 160)"/></g><g fill="none" stroke="#b6c2ed" opacity=".35"><path d="m250 160 125-60m-125 60L155 72m95 88 45 110m-45-110L115 205m135-45 65-90m-65 90-35 90"/></g><circle cx="250" cy="160" r="10" fill="#fff"/><circle cx="375" cy="100" r="9" fill="#e91b63"/><circle cx="155" cy="72" r="9" fill="#efb4cf"/><circle cx="295" cy="270" r="9" fill="#f9e975"/><circle cx="115" cy="205" r="9" fill="#92c43d"/><circle cx="315" cy="70" r="9" fill="#539ed4"/><circle cx="215" cy="250" r="9" fill="#d4d8ff"/></svg><p>Spatial experiences begin with connected ideas.</p></div>
+          <div class="xr-stage-footer"><p id="xr-instructions">Drag to orbit · Tap an idea to explore</p><span class="xr-view-label" aria-hidden="true">↗ YOUR VIEW</span></div>
         </div>
         <div class="xr-controls" hidden>
-          <div class="xr-controls-intro"><p class="eyebrow">Your view. Your pace.</p><h3>A moment is more<br>than a timestamp.</h3><p>Move around the scene. Select an object. Jump back to the step where it comes together.</p></div>
-          <div class="xr-step-heading"><span>Assembly timeline</span><output id="xr-progress-label" for="xr-timeline">100%</output></div>
-          <label class="sr-only" for="xr-timeline">Assembly progress</label><input id="xr-timeline" class="xr-timeline" type="range" min="0" max="100" value="100" step="1" aria-valuetext="Fully assembled">
-          <div class="xr-steps" role="group" aria-label="Jump to an assembly step"><button type="button" data-xr-step="0" aria-pressed="false"><span>01</span>Body</button><button type="button" data-xr-step="1" aria-pressed="false"><span>02</span>Arms</button><button type="button" data-xr-step="2" aria-pressed="false"><span>03</span>Rotors</button><button type="button" data-xr-step="3" class="is-active" aria-pressed="true"><span>04</span>Ready</button></div>
-          <div class="xr-actions"><button class="xr-play" id="xr-play" type="button" aria-pressed="false"><span aria-hidden="true">▶</span> Replay</button><button class="xr-graph" id="xr-graph" type="button" aria-pressed="false"><span aria-hidden="true">◇</span> Scene graph</button><button class="xr-reset" id="xr-reset" type="button" aria-label="Reset the scene and camera" title="Reset view">↺</button></div>
-          <p class="xr-status" id="xr-status" role="status" aria-live="polite">Ready to explore. Try selecting a rotor.</p>
-          <p class="xr-concept-note">A playful concept sketch, inspired by my research.</p>
+          <div class="xr-controls-intro"><p class="eyebrow">Follow an idea</p><h3 id="portal-topic-title">Spatial recording</h3><p id="portal-topic-description">Explore how actions, objects, and their relationships can become a spatial recording.</p></div>
+          <div class="portal-topics" role="group" aria-label="Explore a research topic"><button type="button" data-portal-topic="0" class="is-active" aria-pressed="true"><span aria-hidden="true"></span>Spatial recording</button><button type="button" data-portal-topic="1" aria-pressed="false"><span aria-hidden="true"></span>Scene graphs</button><button type="button" data-portal-topic="2" aria-pressed="false"><span aria-hidden="true"></span>Adaptive playback</button><button type="button" data-portal-topic="3" aria-pressed="false"><span aria-hidden="true"></span>Object interaction</button><button type="button" data-portal-topic="4" aria-pressed="false"><span aria-hidden="true"></span>Shared spaces</button><button type="button" data-portal-topic="5" aria-pressed="false"><span aria-hidden="true"></span>AR &amp; VR</button></div>
+          <a class="portal-research-link" id="portal-research-link" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener">Explore related research <span aria-hidden="true">↗</span></a>
+          <div class="xr-actions"><button id="portal-connections" type="button" aria-pressed="true"><span aria-hidden="true">⌁</span> Connections</button><button id="portal-shuffle" type="button"><span aria-hidden="true">✦</span> Shuffle view</button><button class="xr-reset" id="portal-reset" type="button" aria-label="Reset the constellation view" title="Reset view">↺</button></div>
+          <p class="sr-only" id="xr-status" role="status" aria-live="polite">Pick a glowing point or a topic to explore.</p>
+          <p class="xr-concept-note">A playful map of my research interests.</p>
         </div>
       </div>
     </section>
