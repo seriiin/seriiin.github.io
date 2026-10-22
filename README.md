@@ -1,68 +1,55 @@
-# [Start Bootstrap - Clean Blog](https://startbootstrap.com/template-overviews/clean-blog/)
+# Selin Choi · Research Portfolio
 
-[Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working PHP contact form.
+KAIST UVR Lab의 AR/VR 연구자 Selin Choi를 위한 영문 포트폴리오입니다.
+별도 빌드나 패키지 설치 없이 HTML, CSS, JavaScript 파일을 그대로 GitHub Pages에 배포할 수 있습니다.
 
-## Preview
+## 로컬에서 보기
 
-[![Clean Blog Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog.png)](https://blackrockdigital.github.io/startbootstrap-clean-blog/)
+`index.html`을 브라우저에서 열면 됩니다. Node.js가 설치되어 있다면 다음 명령으로 미리보기 서버를 실행할 수도 있습니다.
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-clean-blog/)**
+```powershell
+npm run dev
+```
 
-## Status
+주소: http://127.0.0.1:4173 · 종료: `Ctrl+C`
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-clean-blog/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-clean-blog.svg)](https://www.npmjs.com/package/startbootstrap-clean-blog)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-clean-blog.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-clean-blog)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog?type=dev)
+## GitHub Pages에 올리기
 
-## Download and Installation
+CV에 기재된 GitHub 아이디 `seriiin`을 기준으로 안내합니다.
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/clean-blog/)
-* Install via npm: `npm i startbootstrap-clean-blog`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-clean-blog.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-clean-blog)
+1. 기존 저장소 [seriiin/seriiin.github.io](https://github.com/seriiin/seriiin.github.io)를 사용합니다. 기본 브랜치는 `master`입니다.
+2. `index.html`, `styles.css`, `main.js`, `.nojekyll`, `assets/`를 저장소 최상위에 올립니다. 로컬 서버를 함께 관리하려면 `scripts/`, `package.json`도 포함할 수 있습니다. `tmp/`는 올리지 않습니다.
+3. 저장소의 **Settings → Pages → Build and deployment → Source**에서 **Deploy from a branch**를 선택합니다.
+4. **master**, **/(root)**를 선택하고 저장합니다.
+5. 배포가 완료되면 https://seriiin.github.io 에서 확인합니다.
 
-## Usage
+이 작업 폴더는 위 저장소에 연결되어 있습니다. 이후 수정 사항은 `master` 브랜치에 커밋하고 push하면 됩니다. 이전 블로그 파일은 Git 기록에서 확인할 수 있습니다.
 
-### Basic Usage
+공식 안내: [GitHub Pages Quickstart](https://docs.github.com/en/pages/quickstart), [배포 소스 설정](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+## 도메인 연결
 
-### Advanced Usage
+도메인을 구매한 다음 GitHub **Settings → Pages → Custom domain**에 등록하고, 도메인 업체의 DNS를 연결합니다. 도메인을 아직 정하지 않았으므로 `CNAME`과 canonical URL은 넣지 않았습니다. 도메인 연결 뒤 canonical/OG URL도 추가하면 됩니다.
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+공식 안내: [사용자 도메인 연결](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
-#### Gulp Tasks
+## 수정할 곳
 
-- `gulp` the default task that builds everything
-- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
+- `index.html`: 소개, 대표 연구, 논문, 경력, 수상, 연락처. 논문을 추가할 때 `data-category="international"` 또는 `"domestic"`을 설정하면 필터에 반영됩니다. 전체 편수는 JavaScript가 계산합니다.
+- `styles.css`: 색, 글꼴, 간격, 화면 크기별 배치.
+- `main.js`: 모바일 메뉴, 논문 필터, 현재 섹션 표시.
+- `assets/selin-choi-cv.pdf`: 제공한 원본 CV. 사이트의 CV 링크는 이 파일을 엽니다. 원본에는 휴대전화 번호가 포함되어 있습니다.
+- `assets/`: 프로필 사진, 대표 논문 이미지, 파비콘.
+- `SOURCES.md`: 내용·이미지 출처와 논문 정보 대조 기록.
 
-You must have npm and Gulp installed globally on your machine in order to use these features.
+웹페이지에는 이메일만 표시합니다. 외부 글꼴, 추적 도구, 서버, API 키는 사용하지 않습니다.
 
-## Bugs and Issues
+## 확인
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/).
+```powershell
+npm run check
+```
 
-## About
+모든 논문은 HTML에 포함되어 JavaScript가 꺼져 있어도 볼 수 있습니다. 필터와 모바일 메뉴는 JavaScript를 사용합니다. 키보드 포커스, 본문 바로가기, 이미지 대체 텍스트, 동작 줄이기 환경설정, 인쇄 스타일을 포함했습니다.
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/gh-pages/LICENSE) license.
+이번 작업 환경에는 연결된 브라우저가 없어 실제 화면 렌더링과 모바일 터치 조작은 확인하지 못했습니다. 공개 배포 전 데스크톱·모바일에서 한 번 확인하세요.
