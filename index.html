@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Selin Choi is a Ph.D. student at KAIST UVR Lab researching spatial recording, scene graphs, and adaptive playback in augmented and virtual reality.">
-  <meta name="theme-color" content="#f7f8f5">
+  <meta name="theme-color" content="#f5faff">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Selin Choi — AR/VR Researcher">
   <meta property="og:description" content="Spatial recording, scene graphs, and adaptive XR playback. Research and publications from KAIST UVR Lab.">
@@ -12,6 +12,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
+  <script src="assets/spatial-playground.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,6 +21,7 @@
       <a class="wordmark" href="#home" aria-label="Selin Choi, home"><span class="mark" aria-hidden="true">sc<span>·</span></span>Selin Choi</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">+</span></button>
       <nav id="navigation" aria-label="Main navigation">
+        <a href="#playground">Playground</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#about">About</a>
@@ -38,7 +40,7 @@
         <p class="intro">I study how we can record, understand, and revisit experiences in augmented and virtual reality. My research connects <strong>spatial recording</strong>, <strong>scene graphs</strong>, and <strong>adaptive playback</strong> to help people navigate complex tasks.</p>
         <p class="affiliation">I'm a Ph.D. student in Culture Technology at <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener">KAIST</a>, advised by <a href="https://uvrlab.org/members" target="_blank" rel="noopener">Prof. Woontack Woo</a>.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#playground">Enter the spatial playground <span aria-hidden="true">↘</span></a>
           <a class="text-link" href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a>
         </div>
         <div class="research-tags" aria-label="Research interests"><span>AR / VR</span><span>Spatial computing</span><span>Human–computer interaction</span></div>
@@ -52,6 +54,27 @@
     <div class="focus-strip">
       <div class="container focus-inner"><span class="eyebrow">Research focus</span><p>From recorded actions<span aria-hidden="true">↗</span>to meaningful XR experiences.</p></div>
     </div>
+
+    <section class="xr-playground container" id="playground" aria-labelledby="playground-title">
+      <div class="section-heading"><div><p class="eyebrow">A little space to explore</p><h2 id="playground-title">Don't just watch. <em>Revisit.</em></h2></div><p class="section-aside">An interactive illustration of<br>spatial recording &amp; playback.</p></div>
+      <div class="xr-experiment">
+        <div class="xr-stage">
+          <div class="xr-stage-heading"><span><i aria-hidden="true"></i> Spatial playback</span><span class="xr-coordinate" aria-hidden="true">SCENE / 001</span></div>
+          <canvas id="spatial-canvas" width="900" height="440" hidden tabindex="0" role="img" aria-label="Interactive 3D drone assembly. Drag to orbit, use arrow keys to rotate, or select a part to revisit its assembly step." aria-describedby="xr-instructions">A drone assembly illustrating spatial playback.</canvas>
+          <div class="xr-fallback"><svg viewBox="0 0 500 280" role="img" aria-label="Illustration of a blue spatial object above a coordinate grid"><g fill="none" stroke="#c3e1f4"><path d="M40 220 250 100 460 220 250 340Z M90 190 300 310 M140 160 350 280 M190 130 400 250 M90 250 300 130 M140 280 350 160 M190 310 400 190"/></g><path d="m170 130 80-45 80 45-80 47Z" fill="#abe3ff" stroke="#2398dc"/><path d="M170 130v75l80 46v-74Z" fill="#71c8f4" stroke="#2398dc"/><path d="M330 130v75l-80 46v-74Z" fill="#329cde" stroke="#147cb6"/><circle cx="250" cy="85" r="5" fill="#147cb6"/><circle cx="170" cy="205" r="5" fill="#147cb6"/><circle cx="330" cy="205" r="5" fill="#147cb6"/></svg><p>Spatial experiences, connected through objects.</p></div>
+          <div class="xr-stage-footer"><p id="xr-instructions">Drag to orbit · Select a part to revisit</p><span class="xr-view-label" aria-hidden="true">↗ 3D VIEW</span></div>
+        </div>
+        <div class="xr-controls" hidden>
+          <div class="xr-controls-intro"><p class="eyebrow">Your view. Your pace.</p><h3>A moment is more<br>than a timestamp.</h3><p>Move around the scene. Select an object. Jump back to the step where it comes together.</p></div>
+          <div class="xr-step-heading"><span>Assembly timeline</span><output id="xr-progress-label" for="xr-timeline">100%</output></div>
+          <label class="sr-only" for="xr-timeline">Assembly progress</label><input id="xr-timeline" class="xr-timeline" type="range" min="0" max="100" value="100" step="1" aria-valuetext="Fully assembled">
+          <div class="xr-steps" role="group" aria-label="Jump to an assembly step"><button type="button" data-xr-step="0" aria-pressed="false"><span>01</span>Body</button><button type="button" data-xr-step="1" aria-pressed="false"><span>02</span>Arms</button><button type="button" data-xr-step="2" aria-pressed="false"><span>03</span>Rotors</button><button type="button" data-xr-step="3" class="is-active" aria-pressed="true"><span>04</span>Ready</button></div>
+          <div class="xr-actions"><button class="xr-play" id="xr-play" type="button" aria-pressed="false"><span aria-hidden="true">▶</span> Replay</button><button class="xr-graph" id="xr-graph" type="button" aria-pressed="false"><span aria-hidden="true">◇</span> Scene graph</button><button class="xr-reset" id="xr-reset" type="button" aria-label="Reset the scene and camera" title="Reset view">↺</button></div>
+          <p class="xr-status" id="xr-status" role="status" aria-live="polite">Ready to explore. Try selecting a rotor.</p>
+          <p class="xr-concept-note">A playful concept sketch, inspired by my research.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="section container" id="research" aria-labelledby="research-title">
       <div class="section-heading"><div><p class="eyebrow">01 / Selected research</p><h2 id="research-title">Revisiting the spatial world.</h2></div><p class="section-aside">Understanding what happened.<br>Finding what matters next.</p></div>

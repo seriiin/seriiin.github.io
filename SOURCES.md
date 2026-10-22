@@ -22,3 +22,7 @@ Images show the owner's profile and coauthored research. Images and papers retai
 ## Verification scope
 
 JavaScript syntax, HTML structure/local links, image metadata, supplied CV equality, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
+
+## Spatial playground
+
+The blue Canvas drone and scene graph are original, illustrative geometry created for this portfolio. They illustrate spatial playback themes and do not reproduce a measured research result. Controls support orbiting, part selection, assembly steps, replay, and a scene graph overlay. Canvas renders and interactions were verified with the bundled native Canvas renderer; whole-page browser and touch-device verification remains unavailable.
