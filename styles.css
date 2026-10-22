@@ -135,6 +135,15 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
 .timeline li > p:not(.date) { font-size: 12px; }
 .timeline .detail { color: var(--muted); line-height: 1.7; margin-top: 6px; }
 .awards-block { margin-top: 54px; }
+.funding-block { margin-top: 42px; }
+.funding-entry { display: grid; grid-template-columns: 72px minmax(0,1fr); gap: 24px; margin-top: 20px; padding: 24px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid var(--palette-sky); border-radius: 4px; }
+.funding-year { color: var(--palette-navy); font-size: 18px; line-height: 1.4; font-family: var(--serif); }
+.funding-year span { display: block; margin-top: 5px; color: var(--muted); font: 10px var(--sans); }
+.funding-program { color: var(--palette-navy); font-size: 11px; font-weight: 600; line-height: 1.6; }
+.funding-program span { display: block; color: var(--muted); font-size: 11px; font-weight: 400; margin-top: 3px; }
+.funding-details h4 { font-size: 18px; font-weight: 500; line-height: 1.5; letter-spacing: -.2px; margin-top: 13px; overflow-wrap: anywhere; }
+.funding-funder { color: var(--muted); font-size: 12px; margin-top: 12px; }
+.funding-funder a { text-decoration: underline; text-decoration-color: var(--line); }
 .award-row { display: flex; align-items: center; gap: 29px; padding-block: 18px; border-bottom: 1px solid var(--line); }
 .award-row > span:first-child { min-width: 52px; color: var(--muted); font-size: 11px; align-self: flex-start; padding-top: 2px; }
 .award-row p { font-size: 13px; }
@@ -310,6 +319,11 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
   .background-grid, .practice-grid { grid-template-columns: 1fr; gap: 32px; }
   .column-title { font-size: 14px; }
   .awards-block { margin-top: 36px; }
+  .funding-block { margin-top: 32px; }
+  .funding-entry { grid-template-columns: 1fr; gap: 17px; padding: 20px; }
+  .funding-year { display: flex; align-items: baseline; gap: 13px; }
+  .funding-year span { margin-top: 0; }
+  .funding-details h4 { font-size: 16px; }
   .award-row { gap: 17px; }
   .award-row p { font-size: 12px; }
   .award-row p span { font-size: 10px; }
@@ -351,7 +365,7 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
   h1 { font-size: 36pt; }
   .hero-statement { font-size: 20pt; }
   .section { padding-block: 25px; }
-  .publication, .research-feature, .timeline li, .award-row { break-inside: avoid; }
+  .publication, .research-feature, .timeline li, .award-row, .funding-entry { break-inside: avoid; }
   .research-description { padding: 15px; }
   .research-image { min-height: 0; padding: 12px; }
   .publication { padding-block: 15px; }

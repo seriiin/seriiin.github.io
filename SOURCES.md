@@ -8,6 +8,8 @@ Prepared on 2026-10-22 (Asia/Seoul). GitHub Pages repository: https://github.com
 - Google Scholar profile: https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&hl=ko. Direct automated access failed. The profile is linked; citation counts and h-index were not inferred or reproduced.
 - Owner confirmed that **Object-Driven Event Retrieval…** should use **IEEE ISMAR 2026**, as listed by KAIST ARRC, rather than TVCG 2026 (in press), as listed in the supplied CV. The linked original CV is unchanged.
 
+- On 2026-10-22, the owner reported selection in 2026 for 박사과정생연구장려금지원, funded by 한국연구재단. The supplied English project title is "AI-Driven Learner-Adaptive Spatial Experience Playback Framework in AR/VR Environments". The website uses the descriptive English label "Doctoral Research Grant" and retains the supplied Korean program name. The funder's English name, National Research Foundation of Korea (NRF), is confirmed by https://eng.nrf.re.kr/.
+
 ## Verified public sources
 
 - KAIST UVR Lab members: https://uvrlab.org/members. Confirms name, Ph.D. student status, lab, and research interests. Portrait: https://uvrlab.org/static/img/members/SelinChoi.jpg → `assets/selin-choi.jpg`.
