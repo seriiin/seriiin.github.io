@@ -78,3 +78,42 @@ if ("IntersectionObserver" in window) {
 
 const year = document.querySelector("#copyright-year");
 if (year) year.textContent = String(new Date().getFullYear());
+
+// A small, user-triggered greeting; no idle animation or page-wide tracking.
+const buddy = document.querySelector(".buddy-button");
+const buddyStatus = document.querySelector("#buddy-status");
+if (buddy && buddyStatus) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  let greetingTimer;
+  const resetLook = () => {
+    buddy.style.setProperty("--buddy-x", "0px");
+    buddy.style.setProperty("--buddy-y", "0px");
+    buddy.style.setProperty("--buddy-tilt", "0deg");
+  };
+  buddy.addEventListener("pointermove", (event) => {
+    if (reducedMotion.matches || !finePointer.matches || event.pointerType !== "mouse") return;
+    const bounds = buddy.getBoundingClientRect();
+    const x = Math.max(-1, Math.min(1, (event.clientX - bounds.left) / bounds.width * 2 - 1));
+    const y = Math.max(-1, Math.min(1, (event.clientY - bounds.top) / bounds.height * 2 - 1));
+    buddy.style.setProperty("--buddy-x", `${(x * 2).toFixed(2)}px`);
+    buddy.style.setProperty("--buddy-y", `${(y * 1.5).toFixed(2)}px`);
+    buddy.style.setProperty("--buddy-tilt", `${(x * 4).toFixed(2)}deg`);
+  });
+  buddy.addEventListener("pointerleave", resetLook);
+  buddy.addEventListener("pointercancel", resetLook);
+  buddy.addEventListener("blur", resetLook);
+  buddy.addEventListener("click", () => {
+    window.clearTimeout(greetingTimer);
+    resetLook();
+    buddy.classList.add("is-greeting");
+    buddyStatus.textContent = "Hi! Thanks for visiting Selin's research.";
+    greetingTimer = window.setTimeout(() => {
+      buddy.classList.remove("is-greeting");
+      buddyStatus.textContent = "";
+    }, 1400);
+  });
+  reducedMotion.addEventListener("change", resetLook);
+  finePointer.addEventListener("change", resetLook);
+  buddy.disabled = false;
+}
