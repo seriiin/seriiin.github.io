@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M11 32C11 17 20 10 32 10s21 7 21 22v11c0 9-10 12-21 12S11 52 11 43Z" fill="#539ed4" stroke="#222d82" stroke-width="2"/><rect x="13" y="22" width="38" height="20" rx="10" fill="#222d82"/><ellipse cx="24" cy="32" rx="6" ry="7" fill="#fff"/><ellipse cx="40" cy="32" rx="6" ry="7" fill="#fff"/><circle cx="25" cy="33" r="2.6" fill="#222d82"/><circle cx="39" cy="33" r="2.6" fill="#222d82"/><circle cx="21" cy="45" r="3" fill="#efb4cf"/><circle cx="43" cy="45" r="3" fill="#efb4cf"/><path d="M28 46q4 4 8 0" fill="none" stroke="#222d82" stroke-width="2" stroke-linecap="round"/><path d="m51 7 1.7 4.3L57 13l-4.3 1.7L51 19l-1.7-4.3L45 13l4.3-1.7Z" fill="#f9e975" stroke="#222d82"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g class="buddy-body" stroke="#161616" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 6C21 4 11 13 11 28c0 11-2 19-5 27 6 5 13 5 19 0 6 3 12 3 18 0 4 4 10 4 15 1-4-7-4-15-4-27C54 15 47 6 35 6Z" fill="#161616"/>
+    <path d="M42 16c-5 6-14 5-20 13-3 4-3 8-2 12 2 8 7 13 14 13 9-1 14-9 13-20 0-8-2-14-5-18Z" fill="#fff"/>
+    <path d="M34 11c-10 1-17 9-18 20m-1 13c-1 4-2 7-4 10m37-34c3 8 3 17 2 25" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <g class="buddy-eye buddy-eye-left" fill="#161616" stroke="none"><ellipse class="buddy-pupil" cx="27" cy="33" rx="2.15" ry="3.1"/></g>
+    <g class="buddy-eye buddy-eye-right" fill="#161616" stroke="none"><ellipse class="buddy-pupil" cx="40" cy="32" rx="2.15" ry="3.1"/></g>
+    <path d="m33 38 1 2-2 .6m-5 3c3 4 8 4 12-1" fill="none" stroke-width="2.5"/>
+    <circle cx="49" cy="38" r="1" fill="#fff" stroke="none"/>
+  </g>
+</svg>

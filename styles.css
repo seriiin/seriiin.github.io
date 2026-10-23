@@ -37,17 +37,12 @@ strong { font-weight: 700; }
 .buddy { display: block; width: 48px; height: 48px; overflow: visible; }
 .buddy-body { transform-box: fill-box; transform-origin: center 80%; transform: rotate(var(--buddy-tilt, 0deg)); transition: transform .16s ease-out; }
 .buddy-pupil { transform: translate(var(--buddy-x, 0px), var(--buddy-y, 0px)); transition: transform .12s ease-out; }
-.buddy-eye, .buddy-hand, .buddy-spark { transform-box: fill-box; transform-origin: center; }
-.buddy-hand { transform-origin: 15% 85%; }
-.buddy-spark { transition: transform .2s ease; }
-.buddy-button:not(:disabled):hover .buddy-spark, .buddy-button:focus-visible .buddy-spark { transform: rotate(15deg) scale(1.15); }
+.buddy-eye { transform-box: fill-box; transform-origin: center; }
 .buddy-hello { position: absolute; top: calc(100% - 3px); left: 50%; padding: 4px 11px; border: 1px solid var(--ink); border-radius: 99px; background: var(--palette-yellow); color: var(--ink); font-size: 11px; font-weight: 700; line-height: 1.5; pointer-events: none; opacity: 0; transform: translate(-50%, -4px) rotate(-7deg); transition: opacity .15s, transform .15s; }
 .is-greeting .buddy-hello { opacity: 1; transform: translate(-50%, 3px) rotate(-7deg); }
 .is-greeting .buddy-body { animation: buddy-bob .55s ease-out; }
-.is-greeting .buddy-hand { animation: buddy-wave .3s ease-in-out 3; }
 .is-greeting .buddy-eye-right { animation: buddy-wink .75s ease; }
 @keyframes buddy-bob { 0%, 100% { transform: translateY(0) rotate(0); } 40% { transform: translateY(-3px) rotate(-5deg); } 70% { transform: translateY(-1px) rotate(3deg); } }
-@keyframes buddy-wave { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-25deg); } }
 @keyframes buddy-wink { 0%, 70%, 100% { transform: scaleY(1); } 25%, 50% { transform: scaleY(.08); } }
 nav { display: flex; align-items: center; gap: 3px; font-size: 12px; font-weight: 600; }
 nav a { padding: 11px 12px; transition: color .2s; }
@@ -405,7 +400,7 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .buddy-body, .buddy-pupil, .buddy-spark { transform: none !important; }
+  .buddy-body, .buddy-pupil { transform: none !important; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 @media print {

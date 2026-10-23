@@ -40,7 +40,7 @@ JavaScript syntax, HTML structure/local links, image metadata, publication count
 
 ## Reference palette
 
-The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Styles, favicon, and browser theme use this palette, with neutral tints and a darker text shade for contrast.
+The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Site styles and the browser theme use this palette, with neutral tints and a darker text shade for contrast. The portrait avatar and matching favicon follow the owner's later black-and-white doodle reference.
 
 ## Dahaja independent project
 
@@ -70,9 +70,11 @@ Following the owner's subsequent refinement, Selected research presents figures 
 
 Self-hosted Latin WOFF2 fonts were downloaded from Google Fonts on 2026-10-23: Manrope (variable weights 400–800) and Instrument Serif (regular and italic). Both use the SIL Open Font License 1.1; the original licenses are included in `assets/fonts/Manrope-OFL.txt` and `assets/fonts/InstrumentSerif-OFL.txt`. Official font sources: https://github.com/google/fonts/tree/main/ofl/manrope and https://github.com/google/fonts/tree/main/ofl/instrumentserif. Korean and other unsupported characters use the system font fallback. The webpage makes no requests to an external font service.
 
-## XR buddy mark
+## Selin avatar mark
 
-The header buddy and matching favicon are original SVG drawings in the owner's palette. The buddy reacts only to pointer movement within its button and to deliberate activation by click, tap, or keyboard. Its greeting lasts 1.4 seconds; no idle animation, persistent state, or external service is used. Reduced-motion preferences disable eye tracking and animation. Without JavaScript, the mark remains a static illustration and its greeting button is disabled. The name next to it remains a separate home link.
+On 2026-10-23, the owner supplied a reference grid of simple black-and-white doodle faces and requested a character version of their portrait in place of the sky-blue header buddy. The new original SVG drawing uses the existing `assets/selin-choi.jpg` as its identity reference: long side-parted dark hair, a small smile, and a stud earring. The supplied grid guides the bold monochrome lines, dot eyes, and simplified face. The header's inline SVG and `assets/favicon.svg` use the same drawing; the source photograph is unchanged.
+
+The character reacts only to pointer movement within its button and deliberate activation by click, tap, or keyboard. Its 1.4-second greeting combines a head bob, wink, and the existing Hi bubble. Reduced-motion preferences disable eye tracking and animation. Without JavaScript, the mark remains a static illustration and its greeting button is disabled. The name next to it remains a separate home link. The SVG is rendered at 256, 48, 32, and 16 pixels to check silhouette, facial features, and small-icon legibility.
 
 ## AR glasses navigation
 
