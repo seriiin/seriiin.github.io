@@ -14,7 +14,6 @@
   <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
-  <script src="assets/research-portal.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,7 +23,6 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">+</span></button>
       <nav id="navigation" aria-label="Main navigation">
         <a href="#research">Research</a>
-        <a href="#playground">Playground</a>
         <a href="#publications">Publications</a>
         <a href="#about">About</a>
         <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
@@ -71,8 +69,8 @@
     <section class="section container" id="research" aria-labelledby="research-title">
       <div class="section-heading"><div><p class="eyebrow">01 / Selected research</p><h2 id="research-title">Revisiting the<br><em>spatial world.</em></h2></div><p class="section-aside">Understanding what happened.<br>Finding what matters next.</p></div>
       <article class="research-feature">
-        <a class="research-image" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener" aria-label="Read Task Breakpoint Generation on arXiv"><img src="assets/task-breakpoints.png" alt="A VR drone assembly is recorded as an Origin-Centric Graph and segmented into fine and coarse task breakpoints." width="2018" height="773" loading="lazy"></a>
-        <div class="research-description"><div class="project-meta"><span>IEEE TVCG · IEEE VR 2026</span><span>01</span></div><h3>Turning recordings into<br>meaningful task steps.</h3><p>Generating task breakpoints from an Origin-Centric Graph so that VR assembly recordings can be navigated at different levels of detail.</p><div class="topic-list"><span>Spatial recording</span><span>Scene graphs</span><span>Adaptive playback</span></div><a class="text-link" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a></div>
+        <a class="research-image" href="https://ieeexplore.ieee.org/abstract/document/11468362" target="_blank" rel="noopener" aria-label="Read Task Breakpoint Generation on IEEE Xplore"><img src="assets/task-breakpoints.png" alt="A VR drone assembly is recorded as an Origin-Centric Graph and segmented into fine and coarse task breakpoints." width="2018" height="773" loading="lazy"></a>
+        <div class="research-description"><div class="project-meta"><span>IEEE TVCG · IEEE VR 2026</span><span>01</span></div><h3>Turning recordings into<br>meaningful task steps.</h3><p>Generating task breakpoints from an Origin-Centric Graph so that VR assembly recordings can be navigated at different levels of detail.</p><div class="topic-list"><span>Spatial recording</span><span>Scene graphs</span><span>Adaptive playback</span></div><a class="text-link" href="https://ieeexplore.ieee.org/abstract/document/11468362" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="research-feature">
         <a class="research-image" href="https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality" target="_blank" rel="noopener" aria-label="Read about Object-Driven Event Retrieval at KAIST ARRC"><img src="assets/object-retrieval.jpg" alt="Selecting a drone part retrieves its assembly event in a mixed reality recording." width="1200" height="900" loading="lazy"></a>
@@ -81,33 +79,13 @@
       <div class="research-context"><span class="context-symbol" aria-hidden="true">↳</span><div><h3>Beyond playback</h3><p>My collaborative work also explores spatial affordances, shared MR spaces, and interactive virtual objects grounded in the real world.</p></div><a class="text-link" href="#publications">All publications <span aria-hidden="true">↓</span></a></div>
     </section>
 
-    <section class="xr-playground container" id="playground" aria-labelledby="playground-title">
-      <div class="section-heading"><div><p class="eyebrow">A little space to explore</p><h2 id="playground-title">A window into <em>my research.</em></h2></div><p class="section-aside">Six ideas.<br>One connected space.</p></div>
-      <div class="xr-experiment">
-        <div class="xr-stage">
-          <div class="xr-stage-heading"><span><i aria-hidden="true"></i> Research constellation</span><span class="xr-coordinate" aria-hidden="true">PICK AN IDEA</span></div>
-          <canvas id="spatial-canvas" width="900" height="440" hidden tabindex="0" role="img" aria-label="Interactive research constellation. Drag or use arrow keys to orbit. Select a glowing point or use the topic buttons to explore research. Press Home to reset the view." aria-describedby="xr-instructions">Six research ideas connected in a spatial constellation.</canvas>
-          <div class="xr-fallback"><svg viewBox="0 0 500 320" role="img" aria-label="Six colorful research ideas around a spatial portal"><g fill="none" stroke="#539ed4" stroke-width="1.5"><circle cx="250" cy="160" r="100"/><ellipse cx="250" cy="160" rx="130" ry="43" transform="rotate(-24 250 160)"/><ellipse cx="250" cy="160" rx="48" ry="120" transform="rotate(-24 250 160)"/></g><g fill="none" stroke="#b6c2ed" opacity=".35"><path d="m250 160 125-60m-125 60L155 72m95 88 45 110m-45-110L115 205m135-45 65-90m-65 90-35 90"/></g><circle cx="250" cy="160" r="10" fill="#fff"/><circle cx="375" cy="100" r="9" fill="#e91b63"/><circle cx="155" cy="72" r="9" fill="#efb4cf"/><circle cx="295" cy="270" r="9" fill="#f9e975"/><circle cx="115" cy="205" r="9" fill="#92c43d"/><circle cx="315" cy="70" r="9" fill="#539ed4"/><circle cx="215" cy="250" r="9" fill="#d4d8ff"/></svg><p>Spatial experiences begin with connected ideas.</p></div>
-          <div class="xr-stage-footer"><p id="xr-instructions">Drag to orbit · Tap an idea to explore</p><span class="xr-view-label" aria-hidden="true">↗ YOUR VIEW</span></div>
-        </div>
-        <div class="xr-controls" hidden>
-          <div class="xr-controls-intro"><p class="eyebrow">Follow an idea</p><h3 id="portal-topic-title">Spatial recording</h3><p id="portal-topic-description">Explore how actions, objects, and their relationships can become a spatial recording.</p></div>
-          <div class="portal-topics" role="group" aria-label="Explore a research topic"><button type="button" data-portal-topic="0" class="is-active" aria-pressed="true"><span aria-hidden="true"></span>Spatial recording</button><button type="button" data-portal-topic="1" aria-pressed="false"><span aria-hidden="true"></span>Scene graphs</button><button type="button" data-portal-topic="2" aria-pressed="false"><span aria-hidden="true"></span>Adaptive playback</button><button type="button" data-portal-topic="3" aria-pressed="false"><span aria-hidden="true"></span>Object interaction</button><button type="button" data-portal-topic="4" aria-pressed="false"><span aria-hidden="true"></span>Shared spaces</button><button type="button" data-portal-topic="5" aria-pressed="false"><span aria-hidden="true"></span>AR &amp; VR</button></div>
-          <a class="portal-research-link" id="portal-research-link" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener">Explore related research <span aria-hidden="true">↗</span></a>
-          <div class="xr-actions"><button id="portal-connections" type="button" aria-pressed="true"><span aria-hidden="true">⌁</span> Connections</button><button id="portal-shuffle" type="button"><span aria-hidden="true">✦</span> Shuffle view</button><button class="xr-reset" id="portal-reset" type="button" aria-label="Reset the constellation view" title="Reset view">↺</button></div>
-          <p class="sr-only" id="xr-status" role="status" aria-live="polite">Pick a glowing point or a topic to explore.</p>
-          <p class="xr-concept-note">A playful map of my research interests.</p>
-        </div>
-      </div>
-    </section>
-
     <section class="section publications-section" id="publications" aria-labelledby="publications-title">
       <div class="container">
         <div class="section-heading"><div><p class="eyebrow">02 / Publications</p><h2 id="publications-title">Papers &amp; <em>proceedings.</em></h2></div><a class="text-link" href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a></div>
         <div class="publication-toolbar" hidden><div class="filters" role="group" aria-label="Filter publications"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>9</span></button><button class="filter-button" type="button" data-filter="international" aria-pressed="false">International</button><button class="filter-button" type="button" data-filter="domestic" aria-pressed="false">Domestic</button></div><p id="publication-count" role="status" aria-live="polite">9 publications</p></div>
         <div class="publication-list">
           <article class="publication" data-category="international" data-year="2026"><div class="publication-year">2026</div><div class="publication-body"><p class="venue">IEEE ISMAR 2026</p><h3>Object-Driven Event Retrieval with Assembled Object Interface for Mixed Reality Assembly Playback</h3><p class="authors"><strong>Selin Choi</strong>, Sun Ah Bae, Dooyoung Kim, and Woontack Woo</p><div class="paper-links"><a href="https://doi.org/10.1109/ISMAR70079.2026.00030" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a href="https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality" target="_blank" rel="noopener">Research page <span aria-hidden="true">↗</span></a></div></div></article>
-          <article class="publication" data-category="international" data-year="2026"><div class="publication-year">2026</div><div class="publication-body"><p class="venue">IEEE Transactions on Visualization and Computer Graphics</p><h3>Task Breakpoint Generation using Origin-Centric Graph in Virtual Reality Recordings for Adaptive Playback</h3><p class="authors"><strong>Selin Choi</strong>, Dooyoung Kim, Taewook Ha, Seonji Kim, and Woontack Woo</p><div class="paper-links"><a href="https://doi.org/10.1109/TVCG.2026.3679910" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/pdf/2603.07627" target="_blank" rel="noopener">PDF <span aria-hidden="true">↗</span></a></div></div></article>
+          <article class="publication" data-category="international" data-year="2026"><div class="publication-year">2026</div><div class="publication-body"><p class="venue">IEEE Transactions on Visualization and Computer Graphics</p><h3>Task Breakpoint Generation using Origin-Centric Graph in Virtual Reality Recordings for Adaptive Playback</h3><p class="authors"><strong>Selin Choi</strong>, Dooyoung Kim, Taewook Ha, Seonji Kim, and Woontack Woo</p><div class="paper-links"><a href="https://ieeexplore.ieee.org/abstract/document/11468362" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/pdf/2603.07627" target="_blank" rel="noopener">PDF <span aria-hidden="true">↗</span></a></div></div></article>
           <article class="publication" data-category="international" data-year="2026"><div class="publication-year">2026</div><div class="publication-body"><p class="venue">IEEE Transactions on Visualization and Computer Graphics</p><h3>Spatial Affordance-Aware Affine Transformation Between Heterogeneous Spaces for Mixed Reality Remote Collaboration</h3><p class="authors">Seonji Kim, Dooyoung Kim, <strong>Selin Choi</strong>, and Woontack Woo</p><div class="paper-links"><a href="https://doi.org/10.1109/TVCG.2026.3680606" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a href="https://arrc.kaist.ac.kr/publications/spatial-affordance-affine-transformation" target="_blank" rel="noopener">Research page <span aria-hidden="true">↗</span></a></div></div></article>
           <article class="publication" data-category="international" data-year="2025"><div class="publication-year">2025</div><div class="publication-body"><p class="venue">IEEE Computer Graphics and Applications</p><h3>Meta-Objects: Interactive and Multisensory Virtual Objects Learned From the Real World for Use in Augmented Reality</h3><p class="authors">Dooyoung Kim, Taewook Ha, Jinseok Hong, Seonji Kim, <strong>Selin Choi</strong>, Heejeong Ko, and Woontack Woo</p><div class="paper-links"><a href="https://doi.org/10.1109/MCG.2025.3555901" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a></div></div></article>
           <article class="publication" data-category="international" data-year="2025"><div class="publication-year">2025</div><div class="publication-body"><p class="venue">IEEE VR Abstracts and Workshops (VRW)</p><h3>Human-Scene Interaction Data Generation with Virtual Environment using User-Centric Scene Graph</h3><p class="authors">Taewook Ha, <strong>Selin Choi</strong>, Seonji Kim, Dooyoung Kim, and Woontack Woo</p><div class="paper-links"><a href="https://doi.org/10.1109/VRW66409.2025.00357" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a></div></div></article>
@@ -152,7 +130,13 @@
           <div class="product-impact"><p><strong>65,000+</strong><span>downloads</span></p></div>
         </article>
       </div>
-      <div class="practice-grid"><div><p class="eyebrow">Interaction design</p><h3>Interfaces in physical space.</h3><p>I led UI development and interface design for an AR furniture placement application, built as a capstone design project.</p></div><div><p class="eyebrow">Teaching</p><h3>Learning through making.</h3><p>At KAIST, I've supported <strong>3D Interaction Design</strong> (2026) and <strong>Augmented Reality Project</strong> (2025), helping students develop Unity-based projects and gesture interactions.</p></div></div>
+      <div class="teaching-block" aria-labelledby="teaching-title">
+        <div class="teaching-intro"><p class="eyebrow">Teaching</p><h3 id="teaching-title">Learning through making.</h3><p>At KAIST, I've supported students in developing Unity-based projects and gesture interactions.</p></div>
+        <ul class="teaching-courses" aria-label="Courses supported at KAIST">
+          <li><span>2026</span><strong>3D Interaction Design</strong></li>
+          <li><span>2025, 2026</span><strong>Augmented Reality Project</strong></li>
+        </ul>
+      </div>
       <div class="skills-line"><span class="eyebrow">In my toolkit</span><p>Unity · C# · C++ · Swift · Python · Xcode · Figma</p></div>
     </section>
 

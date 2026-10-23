@@ -14,7 +14,7 @@ Prepared on 2026-10-22 (Asia/Seoul). GitHub Pages repository: https://github.com
 
 - KAIST UVR Lab members: https://uvrlab.org/members. Confirms name, Ph.D. student status, lab, and research interests. Portrait: https://uvrlab.org/static/img/members/SelinChoi.jpg → `assets/selin-choi.jpg`.
 - Object-Driven Event Retrieval: https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality. Source for venue, DOI, author order, and short research description. Image: https://arrc.kaist.ac.kr/assets/uploads/publication-assets/d8726232-fe5e-4f72-b1cc-f75963925fc5/cover-1200x900.jpg → `assets/object-retrieval.jpg`.
-- Task Breakpoint Generation: https://arxiv.org/abs/2603.07627 and https://arrc.kaist.ac.kr/publications/task-breakpoint-generation-using-origin-centric-graph-in-virtual-reality. Source for DOI and research description. Teaser: https://arxiv.org/html/2603.07627v1/Teaser.png → `assets/task-breakpoints.png`.
+- Task Breakpoint Generation: https://arxiv.org/abs/2603.07627 and https://arrc.kaist.ac.kr/publications/task-breakpoint-generation-using-origin-centric-graph-in-virtual-reality. Source for DOI and research description. On 2026-10-23, the owner supplied https://ieeexplore.ieee.org/abstract/document/11468362 as the preferred paper link; the selected research and publication entry use this address. Automated access to the IEEE page was unavailable. The separate arXiv PDF link remains available. Teaser: https://arxiv.org/html/2603.07627v1/Teaser.png → `assets/task-breakpoints.png`.
 - Spatial Affordance-Aware Affine Transformation: https://arrc.kaist.ac.kr/publications/spatial-affordance-affine-transformation. The supplied CV lists Dooyoung Kim before Seonji Kim; this official paper entry lists **Seonji Kim, Dooyoung Kim, Selin Choi, Woontack Woo**. The website follows the official entry.
 - KAIST PMRC profile: https://meta.kaist.ac.kr/members/131. Source for the Meta-Objects and Human-Scene Interaction DOI links. The website uses the professional email from the owner-supplied CV.
 - Spatial Affordance-Aware Interactable Subspace Allocation: https://arxiv.org/abs/2408.04297. Source for paper/PDF links and author order. Award wording follows the supplied CV.
@@ -25,17 +25,17 @@ Images show the owner's profile and coauthored research. Images and papers retai
 
 JavaScript syntax, HTML structure/local links, image metadata, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
 
-## Research portal
-
-The research constellation is an original interactive illustration of six research interests. Its glowing points link to the existing research sources above. It is a playful map of interests, not an evaluated research system. It supports orbiting, topic selection, related research links, connection visibility, and shuffled viewpoints. Nothing animates automatically. Native Canvas rendering and interactions are verified; whole-page browser and touch-device verification remains unavailable.
-
 ## Reference palette
 
-The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Styles, the research constellation, fallback illustration, favicon, and browser theme use this palette, with neutral tints and a darker text shade for contrast.
+The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Styles, favicon, and browser theme use this palette, with neutral tints and a darker text shade for contrast.
 
 ## Dahaja independent project
 
 On 2026-10-23, the owner confirmed that Dahaja's product planning, design, development, and App Store release were all handled independently. The 65,000+ download milestone is from the supplied CV dated 2026-10-22. It is not a user-count or ratings statistic. The official Apple listing confirms the app name, developer Selin Choi, and first release in October 2020: https://apps.apple.com/kr/app/%EB%8B%A4%ED%95%98%EC%9E%90/id1537356258. Apple lookup API: https://itunes.apple.com/lookup?id=1537356258&country=kr. Official app artwork downloaded to `assets/dahaja-icon.jpg` from https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/17/ba/ad/17baad78-1c9e-4887-1dd9-3ef7da44c820/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg.
+
+## Teaching
+
+The supplied CV lists support for 3D Interaction Design (2026) and Augmented Reality Project (2025) at KAIST. On 2026-10-23, the owner also confirmed Augmented Reality Project for 2026. The website lists both 2025 and 2026 for that course.
 
 ## Typography and layout reference
 
