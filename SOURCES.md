@@ -37,7 +37,7 @@ The download milestone is dated "As of Oct. 2026" on the website to identify its
 
 ## Teaching
 
-The supplied CV lists support for 3D Interaction Design (2026) and Augmented Reality Project (2025) at KAIST. On 2026-10-23, the owner also confirmed Augmented Reality Project for 2026. The website lists both 2025 and 2026 for that course.
+The owner confirmed the course codes and terms: 3D Interaction Design (GCT555), Spring 2026; Augmented Reality Project (GCT600/MV600), Fall 2025 and Fall 2026. These details refine the teaching years listed in the supplied CV and the owner's earlier confirmation.
 
 ## Typography and layout reference
 

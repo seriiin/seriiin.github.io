@@ -180,6 +180,7 @@ h2 em { font: italic 1.2em/.9 var(--serif); letter-spacing: -.035em; }
 .teaching-courses li:first-child { border-top: 1px solid #d9d6bd; }
 .teaching-courses span { color: var(--muted); font-size: 11px; }
 .teaching-courses strong { font-size: 15px; font-weight: 500; line-height: 1.5; letter-spacing: -.3px; }
+.course-code { margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.5; }
 .skills-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 16px 35px; border-top: 1px solid var(--line); padding-top: 29px; margin-top: 40px; }
 .skills-line p { font-size: 13px; color: var(--muted); }
 .contact-section { margin-inline: 24px; background: var(--ink); color: var(--paper); border-radius: 36px; }
