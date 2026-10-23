@@ -83,8 +83,6 @@ h1 { margin-block: 10px 8px; font-size: 56px; line-height: 1.15; letter-spacing:
 .portrait-face .portrait { height: 100%; }
 .portrait-back { transform: rotateY(180deg); }
 .portrait-flip[aria-pressed="true"] .portrait-card { transform: rotateY(180deg); }
-.portrait-hint { display: block; margin-top: 4px; color: var(--blue); }
-.portrait-hint span { display: inline-block; margin-left: 4px; font-size: 13px; vertical-align: middle; }
 .intro, .affiliation { max-width: 640px; color: var(--muted); font-size: 15px; line-height: 1.85; }
 .intro { margin-top: 14px; }
 .affiliation { margin-top: 5px; font-size: 13px; }
@@ -378,7 +376,7 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
   h1 { font-size: 30pt; }
   .portrait-frame { width: 100%; border-radius: 0; }
   .portrait-card { transform: none !important; }
-  .portrait-back, .portrait-hint { display: none !important; }
+  .portrait-back { display: none !important; }
   .section { padding-block: 30px; }
   #research { padding-top: 30px; }
   h2 { font-size: 27pt; }

@@ -97,7 +97,6 @@ if (year) year.textContent = String(new Date().getFullYear());
 const portraitFlip = document.querySelector(".portrait-flip");
 const portraitFront = document.querySelector(".portrait-front");
 const portraitBack = document.querySelector(".portrait-back");
-const portraitHint = document.querySelector("#portrait-hint");
 if (portraitFlip && portraitFront && portraitBack) {
   portraitFlip.addEventListener("click", () => {
     const showAlternate = portraitFlip.getAttribute("aria-pressed") !== "true";
@@ -106,7 +105,6 @@ if (portraitFlip && portraitFront && portraitBack) {
     portraitBack.setAttribute("aria-hidden", String(!showAlternate));
   });
   portraitFlip.disabled = false;
-  if (portraitHint) portraitHint.hidden = false;
 }
 
 const videoPanels = [...document.querySelectorAll(".research-video")];
