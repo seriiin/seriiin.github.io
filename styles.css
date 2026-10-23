@@ -119,10 +119,12 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
 .publications-section { border-top: 1px solid var(--line); }
 .publication-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
 .filters { display: flex; flex-wrap: wrap; gap: 7px; }
-.filter-button { min-height: 40px; padding: 8px 14px; background: transparent; border: 1px solid transparent; color: var(--muted); font-size: 12px; border-radius: 6px; transition: background .2s; }
-.filter-button:hover { background: var(--soft); color: var(--blue); }
-.filter-button.is-active { background: var(--palette-blush); color: var(--blue); font-weight: 600; }
-.filter-button span { margin-left: 9px; opacity: .75; }
+.filter-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 8px 14px; background: transparent; border: 1px solid var(--line); color: var(--muted); font-size: 12px; border-radius: 999px; transition: background .2s, border-color .2s, color .2s; }
+.filter-button:hover { background: var(--soft); border-color: var(--palette-sky); color: var(--blue); }
+.filter-button.is-active { background: transparent; border-color: var(--blue); color: var(--blue); font-weight: 600; }
+.filter-button.is-active:hover { background: var(--soft); }
+.filter-button span { display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; padding-inline: 6px; border-radius: 999px; background: var(--soft); color: var(--blue); font-size: 10px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.filter-button.is-active span { background: var(--surface-sky); }
 #publication-count { color: var(--muted); font-size: 11px; white-space: nowrap; }
 .publication { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 24px; padding-block: 20px; border-bottom: 1px solid var(--line); }
 .publication:last-child { border-bottom: 0; padding-bottom: 0; }

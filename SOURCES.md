@@ -68,6 +68,8 @@ The owner clarified that a cleaner appearance should preserve the supplied color
 
 Following the owner's subsequent refinement, Selected research presents figures and descriptions directly on the page background with thin row separators. Its former sky-blue/blush card fills and enclosing borders are removed. The View research primary link uses a navy outline, navy text, and a transparent background; hover and keyboard focus add only a faint blue tint. Research figures keep their intrinsic aspect ratios and fill the available column width.
 
+The publication filters use compact rounded outline buttons. The selected filter has a navy border and text instead of a blush background. All includes a separate small sky-tinted count badge; its number remains fully opaque for legibility. International and Domestic share the same selected-state treatment. Existing filtering behavior and keyboard focus styles remain unchanged.
+
 Self-hosted Latin WOFF2 fonts were downloaded from Google Fonts on 2026-10-23: Manrope (variable weights 400–800) and Instrument Serif (regular and italic). Both use the SIL Open Font License 1.1; the original licenses are included in `assets/fonts/Manrope-OFL.txt` and `assets/fonts/InstrumentSerif-OFL.txt`. Official font sources: https://github.com/google/fonts/tree/main/ofl/manrope and https://github.com/google/fonts/tree/main/ofl/instrumentserif. Korean and other unsupported characters use the system font fallback. The webpage makes no requests to an external font service.
 
 ## Selin avatar mark
