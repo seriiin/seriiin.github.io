@@ -40,22 +40,37 @@ if (toolbar && publications.length && publicationCount) {
   const totalBadge = toolbar.querySelector('[data-filter="all"] span');
   if (totalBadge) totalBadge.textContent = String(publications.length);
   publicationCount.textContent = `${publications.length} publications`;
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const category = button.dataset.filter;
-      let visibleCount = 0;
-      publications.forEach((publication) => {
-        const show = category === "all" || publication.dataset.category === category;
-        publication.hidden = !show;
-        if (show) visibleCount++;
-      });
-      filterButtons.forEach((filterButton) => {
-        const selected = filterButton === button;
-        filterButton.classList.toggle("is-active", selected);
-        filterButton.setAttribute("aria-pressed", String(selected));
-      });
-      publicationCount.textContent = `${visibleCount} publication${visibleCount === 1 ? "" : "s"}`;
+  const filterPublications = (category) => {
+    let visibleCount = 0;
+    publications.forEach((publication) => {
+      const show = category === "all" || publication.dataset.category === category;
+      publication.hidden = !show;
+      if (show) visibleCount++;
     });
+    filterButtons.forEach((button) => {
+      const selected = button.dataset.filter === category;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+    publicationCount.textContent = `${visibleCount} publication${visibleCount === 1 ? "" : "s"}`;
+  };
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => filterPublications(button.dataset.filter));
+  });
+  // Cross-links from demos must still work when a paper is filtered out.
+  const revealPublication = (hash) => {
+    const target = publications.find((publication) => publication.id && `#${publication.id}` === hash);
+    if (!target || !target.hidden) return null;
+    filterPublications("all");
+    return target;
+  };
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (link && !event.defaultPrevented) revealPublication(link.getAttribute("href"));
+  });
+  window.addEventListener("hashchange", () => {
+    const revealed = revealPublication(window.location.hash);
+    if (revealed) revealed.scrollIntoView({ block: "start" });
   });
 }
 
@@ -80,15 +95,17 @@ const year = document.querySelector("#copyright-year");
 if (year) year.textContent = String(new Date().getFullYear());
 
 const videoPanels = [...document.querySelectorAll(".research-video")];
-const researchVideos = videoPanels.map((panel) => panel.querySelector("video")).filter(Boolean);
+const portfolioVideos = [...document.querySelectorAll("video")];
 videoPanels.forEach((panel) => {
   const video = panel.querySelector("video");
   if (!video) return;
   panel.addEventListener("toggle", () => {
     if (!panel.open) video.pause();
   });
+});
+portfolioVideos.forEach((video) => {
   video.addEventListener("play", () => {
-    researchVideos.forEach((other) => {
+    portfolioVideos.forEach((other) => {
       if (other !== video) other.pause();
     });
   });

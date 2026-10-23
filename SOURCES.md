@@ -35,6 +35,15 @@ The owner identified `2026VR/시퀀스 01.mp4` as the Task Breakpoint Generation
 
 Both MP4 files have their metadata moved to the start for progressive playback. Each appears in a native expandable video player with `preload="none"`, inline playback, and no autoplay. Both complete video and audio streams were decoded to check for errors; actual browser playback remains unverified in this environment.
 
+## Owner-provided project demos
+
+On 2026-10-23, the owner supplied two further videos and requested a gallery. The owner identified the first as their Metaverse Developer Contest demo and said it connects to an existing publication and award. Its bare-hand AR voxel-drawing content matches the 2023 KIISE paper, "Interactive 3D Voxel Drawing System Using Bare-Hand Interaction with Augmented Reality Glasses", in the supplied CV. The gallery uses the short descriptive heading "AR Voxel Drawing" and links this paper and the CV's 2023 K-META 2nd Place award. Both existing entries link back to the demo; no new publication or award is inferred.
+
+- `Downloads/발표자료/데모.mp4` → `assets/videos/ar-voxel-drawing.mp4`: the complete 56.033-second, 1080×720 recording, encoded as H.264 for the web (12,976,265 bytes; original 51,107,325 bytes). The source has no audio stream, and none was added. Its poster is a frame at 46 seconds; only that poster's black top/bottom matte was removed before scaling to 960×540. The video retains the complete original frame.
+- `Downloads/[GCT501] MINIEMO_ An Interactive Toy to improve mental health using Generative AI.mp4` → `assets/videos/miniemo.mp4`: the complete approximately 69-second, 1280×720 H.264/AAC recording, remuxed without re-encoding (5,210,176 bytes). Original video and audio streams are retained. Its 960×540 poster is a frame at 15 seconds. The owner identified it as a project from the 문화기술론 course; the filename supplies the GCT501 code and MINIEMO name. It is presented as a course project exploring generative AI and mental well-being. No course term, team size, individual role, or clinical benefit is claimed.
+
+Both original files remain unchanged. The two demos are grouped under Demo gallery within Projects, separately from the independently developed Dahaja app. The layout uses two columns on larger screens and one on narrow screens. Each video uses native controls, inline playback, `preload="none"`, and no autoplay, with MP4 metadata at the start. Starting any research or gallery video pauses the others. The four videos' local serving and range requests, the new complete video/audio streams, poster dimensions, and gallery cross-links were checked. Actual browser rendering/playback could not be checked because no browser was connected.
+
 ## Verification scope
 
 JavaScript syntax, HTML structure/local links, image metadata, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
