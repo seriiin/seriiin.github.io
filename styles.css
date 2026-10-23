@@ -59,9 +59,8 @@ nav .nav-contact:hover, nav .nav-contact[aria-current="location"] { background: 
 h1 { margin-block: 10px 8px; font-size: 56px; line-height: 1.15; letter-spacing: -.05em; font-weight: 600; }
 .hero-role { font-size: 16px; font-weight: 500; line-height: 1.7; }
 .portrait-block { padding-bottom: 4px; }
-.portrait-frame { position: relative; display: block; overflow: hidden; border-radius: 12px; background: var(--soft); }
+.portrait-frame { display: block; overflow: hidden; border-radius: 12px; background: var(--soft); }
 .portrait { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
-.ar-glasses { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .portrait-block figcaption { margin-top: 10px; color: var(--muted); font-size: 10px; line-height: 1.6; }
 .intro, .affiliation { max-width: 640px; color: var(--muted); font-size: 15px; line-height: 1.85; }
 .intro { margin-top: 14px; }
@@ -336,7 +335,7 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 @media print {
-  .site-header, .hero-actions, .research-tags, .publication-toolbar, .contact-section, .site-footer, .paper-links, .section-heading > a, .research-video, .ar-glasses { display: none !important; }
+  .site-header, .hero-actions, .research-tags, .publication-toolbar, .contact-section, .site-footer, .paper-links, .section-heading > a, .research-video { display: none !important; }
   body { background: white; font-size: 11pt; }
   .container { width: 100%; }
   .hero { grid-template-columns: minmax(0,1fr) 110px; gap: 30px; padding-block: 10px 25px; }
