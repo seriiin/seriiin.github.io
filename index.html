@@ -63,56 +63,12 @@
         <div class="research-tags" aria-label="Research interests"><span>Spatial recording</span><span>Scene graphs</span><span>Adaptive playback</span></div>
       </div>
       <figure class="portrait-block">
-        <button class="portrait-trigger" type="button" aria-label="Open my AR view by selecting the glasses" aria-haspopup="dialog" aria-controls="ar-explorer" aria-expanded="false" title="Open my AR view" disabled>
-          <span class="portrait-frame">
-            <img class="portrait" src="assets/selin-choi.jpg" width="1245" height="1660" alt="Portrait of Selin Choi" fetchpriority="high">
-            <svg class="ar-glasses" viewBox="0 0 1245 1660" aria-hidden="true" focusable="false">
-              <defs>
-                <linearGradient id="ar-lens-tint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9e5ff" stop-opacity=".48"/><stop offset=".5" stop-color="#539ed4" stop-opacity=".13"/><stop offset="1" stop-color="#222d82" stop-opacity=".3"/></linearGradient>
-                <linearGradient id="ar-frame-tint"><stop stop-color="#222d82"/><stop offset=".48" stop-color="#539ed4"/><stop offset="1" stop-color="#222d82"/></linearGradient>
-              </defs>
-              <g transform="rotate(-10 575 520)" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m363 482-48-19m473 19 57-19" fill="none" stroke="#222d82" stroke-width="10"/>
-                <g class="ar-lenses" fill="url(#ar-lens-tint)" stroke="url(#ar-frame-tint)" stroke-width="6">
-                  <path d="M365 463q96-17 198 0l-5 86q-6 39-63 42h-66q-55-4-61-43Z"/>
-                  <path d="M587 463q99-17 198 0l-3 85q-6 39-61 43h-66q-57-3-63-42Z"/>
-                </g>
-                <path d="M361 465q102-22 207 0m15 0q103-22 206 0M563 487q12-13 24 0" fill="none" stroke="url(#ar-frame-tint)" stroke-width="12"/>
-                <path d="m383 478 52-5m173 5 52-5" fill="none" stroke="white" stroke-opacity=".8" stroke-width="4"/>
-                <path class="ar-lens-light" d="m384 567 23 5m350-5-23 5" fill="none" stroke="#a9e5ff" stroke-width="5"/>
-                <circle cx="372" cy="470" r="5" fill="#a9e5ff"/><circle cx="777" cy="470" r="5" fill="#a9e5ff"/>
-              </g>
-            </svg>
-          </span>
-        </button>
-        <figcaption><span class="ar-entry-hint" hidden>Click my glasses <span aria-hidden="true">↗</span></span><span>Daejeon, South Korea</span></figcaption>
+        <div class="portrait-frame">
+          <img class="portrait" src="assets/selin-choi.jpg" width="1245" height="1660" alt="Portrait of Selin Choi" fetchpriority="high">
+        </div>
+        <figcaption>Daejeon, South Korea</figcaption>
       </figure>
     </section>
-
-    <dialog class="ar-explorer" id="ar-explorer" aria-labelledby="ar-explorer-title">
-      <div class="ar-stage">
-        <div class="ar-stage-header"><div><p class="eyebrow">Through my glasses</p><h2 id="ar-explorer-title">Explore my work</h2></div><button class="ar-close" type="button" aria-label="Close AR view" title="Close AR view" autofocus><span aria-hidden="true">×</span></button></div>
-        <div class="ar-windows">
-          <a class="ar-window" href="#research" style="--ar-delay: 0ms; --ar-tilt: -12deg">
-            <span class="ar-preview ar-preview-research" aria-hidden="true"><img src="assets/task-breakpoints.png" alt="" width="2018" height="773" loading="lazy"></span>
-            <span class="ar-window-label">Research <span aria-hidden="true">↗</span></span><span class="ar-window-description">Spatial recording &amp; adaptive playback</span>
-          </a>
-          <a class="ar-window" href="#publications" style="--ar-delay: 65ms; --ar-tilt: -4deg">
-            <span class="ar-preview ar-preview-papers" aria-hidden="true"><span class="ar-paper"><span>Selected papers</span><strong>AR / VR</strong><span class="ar-paper-lines"></span></span></span>
-            <span class="ar-window-label">Publications <span aria-hidden="true">↗</span></span><span class="ar-window-description">Papers &amp; proceedings</span>
-          </a>
-          <a class="ar-window" href="#about" style="--ar-delay: 130ms; --ar-tilt: 4deg">
-            <span class="ar-preview ar-preview-profile" aria-hidden="true"><span class="ar-profile-card"><img src="assets/selin-choi.jpg" alt="" width="1245" height="1660" loading="lazy"><strong>Selin Choi</strong><span>KAIST · UVR Lab</span></span></span>
-            <span class="ar-window-label">Profile <span aria-hidden="true">↗</span></span><span class="ar-window-description">Background, awards &amp; teaching</span>
-          </a>
-          <a class="ar-window" href="#projects" style="--ar-delay: 195ms; --ar-tilt: 12deg">
-            <span class="ar-preview ar-preview-projects" aria-hidden="true"><img src="assets/dahaja-icon.jpg" alt="" width="512" height="512" loading="lazy"><span>Dahaja &amp; more</span></span>
-            <span class="ar-window-label">Projects <span aria-hidden="true">↗</span></span><span class="ar-window-description">Funded research &amp; independent work</span>
-          </a>
-        </div>
-        <div class="ar-stage-footer"><span><span class="ar-online-dot" aria-hidden="true"></span>Pick a window to explore</span><span><kbd>Esc</kbd> to close</span></div>
-      </div>
-    </dialog>
 
     <section class="section container" id="research" aria-labelledby="research-title">
       <div class="section-heading"><h2 id="research-title">Selected research</h2></div>
