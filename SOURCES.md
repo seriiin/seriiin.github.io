@@ -36,3 +36,9 @@ The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sk
 ## Dahaja independent project
 
 On 2026-10-23, the owner confirmed that Dahaja's product planning, design, development, and App Store release were all handled independently. The 65,000+ download milestone is from the supplied CV dated 2026-10-22. It is not a user-count or ratings statistic. The official Apple listing confirms the app name, developer Selin Choi, and first release in October 2020: https://apps.apple.com/kr/app/%EB%8B%A4%ED%95%98%EC%9E%90/id1537356258. Apple lookup API: https://itunes.apple.com/lookup?id=1537356258&country=kr. Official app artwork downloaded to `assets/dahaja-icon.jpg` from https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/17/ba/ad/17baad78-1c9e-4887-1dd9-3ef7da44c820/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg.
+
+## Typography and layout reference
+
+The owner supplied https://grandecharte.co/ as a reference for typography, buttons, and layout. The portfolio interprets that direction through oversized headings, contrasting serif italics, pill buttons with circular arrows, generous spacing, and alternating research layouts. The existing six-color palette and factual content are retained. No object imagery or proprietary fonts from the reference are used.
+
+Self-hosted Latin WOFF2 fonts were downloaded from Google Fonts on 2026-10-23: Manrope (variable weights 400–800) and Instrument Serif (regular and italic). Both use the SIL Open Font License 1.1; the original licenses are included in `assets/fonts/Manrope-OFL.txt` and `assets/fonts/InstrumentSerif-OFL.txt`. Official font sources: https://github.com/google/fonts/tree/main/ofl/manrope and https://github.com/google/fonts/tree/main/ofl/instrumentserif. Korean and other unsupported characters use the system font fallback. The webpage makes no requests to an external font service.

@@ -27,7 +27,7 @@ if (menuToggle && navigation) {
       menuToggle.focus();
     }
   });
-  const wideViewport = window.matchMedia("(min-width: 581px)");
+  const wideViewport = window.matchMedia("(min-width: 781px)");
   wideViewport.addEventListener("change", closeMenu);
 }
 

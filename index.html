@@ -10,6 +10,8 @@
   <meta property="og:description" content="Spatial recording, scene graphs, and adaptive XR playback. Research and publications from KAIST UVR Lab.">
   <title>Selin Choi — AR/VR Researcher</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
   <script src="assets/research-portal.js" defer></script>
@@ -21,38 +23,63 @@
       <a class="wordmark" href="#home" aria-label="Selin Choi, home"><span class="mark" aria-hidden="true">sc<span>·</span></span>Selin Choi</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">+</span></button>
       <nav id="navigation" aria-label="Main navigation">
-        <a href="#playground">Playground</a>
         <a href="#research">Research</a>
+        <a href="#playground">Playground</a>
         <a href="#publications">Publications</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero container" id="home" aria-labelledby="intro-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="small-square" aria-hidden="true"></span> Ph.D. student · KAIST UVR Lab</p>
-        <h1 id="intro-title">Selin Choi<span class="name-dot">.</span><span class="korean-name" lang="ko">최세린</span></h1>
-        <p class="hero-statement">Making spatial experiences<br>easier to <em>revisit.</em></p>
-        <p class="intro">I study how we can record, understand, and revisit experiences in augmented and virtual reality. My research connects <strong>spatial recording</strong>, <strong>scene graphs</strong>, and <strong>adaptive playback</strong> to help people navigate complex tasks.</p>
-        <p class="affiliation">I'm a Ph.D. student in Culture Technology at <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener">KAIST</a>, advised by <a href="https://uvrlab.org/members" target="_blank" rel="noopener">Prof. Woontack Woo</a>.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#playground">Explore the research portal <span aria-hidden="true">↘</span></a>
-          <a class="text-link" href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="research-tags" aria-label="Research interests"><span>AR / VR</span><span>Spatial computing</span><span>Human–computer interaction</span></div>
+      <div class="hero-topline">
+        <p class="hero-name">Selin Choi<span class="name-dot">.</span> <span class="korean-name" lang="ko">최세린</span></p>
+        <p class="eyebrow"><span class="small-square" aria-hidden="true"></span> AR / VR researcher · KAIST</p>
       </div>
-      <figure class="portrait-block">
-        <div class="portrait-frame"><span class="frame-corner corner-top" aria-hidden="true"></span><img class="portrait" src="assets/selin-choi.jpg" width="1245" height="1660" alt="Portrait of Selin Choi" fetchpriority="high"><span class="frame-corner corner-bottom" aria-hidden="true"></span></div>
-        <figcaption><span>Based in Daejeon, South Korea</span><span class="portrait-coordinate" aria-hidden="true">[ SC / XR ]</span></figcaption>
-      </figure>
+      <div class="hero-main">
+        <h1 id="intro-title">
+          <span>Making spatial</span>
+          <span>experiences</span>
+          <span>easier to <em>revisit.</em></span>
+        </h1>
+        <figure class="portrait-block">
+          <div class="portrait-frame"><img class="portrait" src="assets/selin-choi.jpg" width="1245" height="1660" alt="Portrait of Selin Choi" fetchpriority="high"></div>
+          <figcaption><span>Ph.D. student · KAIST UVR Lab</span><span>Based in Daejeon, South Korea</span></figcaption>
+        </figure>
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-copy">
+          <p class="intro">I study how we can record, understand, and revisit experiences in augmented and virtual reality. My research connects <strong>spatial recording</strong>, <strong>scene graphs</strong>, and <strong>adaptive playback</strong> to help people navigate complex tasks.</p>
+          <p class="affiliation">I'm a Ph.D. student in Culture Technology at <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener">KAIST</a>, advised by <a href="https://uvrlab.org/members" target="_blank" rel="noopener">Prof. Woontack Woo</a>.</p>
+        </div>
+        <div class="hero-next">
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research">Explore my research <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="research-tags" aria-label="Research interests"><span>AR / VR</span><span>Spatial computing</span><span>Human–computer interaction</span></div>
+        </div>
+      </div>
     </section>
 
     <div class="focus-strip">
       <div class="container focus-inner"><span class="eyebrow">Research focus</span><p>From recorded actions<span aria-hidden="true">↗</span>to meaningful XR experiences.</p></div>
     </div>
+
+    <section class="section container" id="research" aria-labelledby="research-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / Selected research</p><h2 id="research-title">Revisiting the<br><em>spatial world.</em></h2></div><p class="section-aside">Understanding what happened.<br>Finding what matters next.</p></div>
+      <article class="research-feature">
+        <a class="research-image" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener" aria-label="Read Task Breakpoint Generation on arXiv"><img src="assets/task-breakpoints.png" alt="A VR drone assembly is recorded as an Origin-Centric Graph and segmented into fine and coarse task breakpoints." width="2018" height="773" loading="lazy"></a>
+        <div class="research-description"><div class="project-meta"><span>IEEE TVCG · IEEE VR 2026</span><span>01</span></div><h3>Turning recordings into<br>meaningful task steps.</h3><p>Generating task breakpoints from an Origin-Centric Graph so that VR assembly recordings can be navigated at different levels of detail.</p><div class="topic-list"><span>Spatial recording</span><span>Scene graphs</span><span>Adaptive playback</span></div><a class="text-link" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="research-feature">
+        <a class="research-image" href="https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality" target="_blank" rel="noopener" aria-label="Read about Object-Driven Event Retrieval at KAIST ARRC"><img src="assets/object-retrieval.jpg" alt="Selecting a drone part retrieves its assembly event in a mixed reality recording." width="1200" height="900" loading="lazy"></a>
+        <div class="research-description"><div class="project-meta"><span>IEEE ISMAR 2026</span><span>02</span></div><h3>Find the moment.<br>Through the object.</h3><p>Using parts of an assembled object as an interface to retrieve related assembly events in mixed reality playback.</p><div class="topic-list"><span>Object interaction</span><span>Event retrieval</span><span>Mixed reality</span></div><a class="text-link" href="https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality" target="_blank" rel="noopener">Explore the research <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <div class="research-context"><span class="context-symbol" aria-hidden="true">↳</span><div><h3>Beyond playback</h3><p>My collaborative work also explores spatial affordances, shared MR spaces, and interactive virtual objects grounded in the real world.</p></div><a class="text-link" href="#publications">All publications <span aria-hidden="true">↓</span></a></div>
+    </section>
 
     <section class="xr-playground container" id="playground" aria-labelledby="playground-title">
       <div class="section-heading"><div><p class="eyebrow">A little space to explore</p><h2 id="playground-title">A window into <em>my research.</em></h2></div><p class="section-aside">Six ideas.<br>One connected space.</p></div>
@@ -74,22 +101,9 @@
       </div>
     </section>
 
-    <section class="section container" id="research" aria-labelledby="research-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / Selected research</p><h2 id="research-title">Revisiting the spatial world.</h2></div><p class="section-aside">Understanding what happened.<br>Finding what matters next.</p></div>
-      <article class="research-feature">
-        <a class="research-image" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener" aria-label="Read Task Breakpoint Generation on arXiv"><img src="assets/task-breakpoints.png" alt="A VR drone assembly is recorded as an Origin-Centric Graph and segmented into fine and coarse task breakpoints." width="2018" height="773" loading="lazy"></a>
-        <div class="research-description"><div class="project-meta"><span>IEEE TVCG · IEEE VR 2026</span><span>01</span></div><h3>Turning recordings into<br>meaningful task steps.</h3><p>Generating task breakpoints from an Origin-Centric Graph so that VR assembly recordings can be navigated at different levels of detail.</p><div class="topic-list"><span>Spatial recording</span><span>Scene graphs</span><span>Adaptive playback</span></div><a class="text-link" href="https://arxiv.org/abs/2603.07627" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a></div>
-      </article>
-      <article class="research-feature">
-        <a class="research-image" href="https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality" target="_blank" rel="noopener" aria-label="Read about Object-Driven Event Retrieval at KAIST ARRC"><img src="assets/object-retrieval.jpg" alt="Selecting a drone part retrieves its assembly event in a mixed reality recording." width="1200" height="900" loading="lazy"></a>
-        <div class="research-description"><div class="project-meta"><span>IEEE ISMAR 2026</span><span>02</span></div><h3>Find the moment.<br>Through the object.</h3><p>Using parts of an assembled object as an interface to retrieve related assembly events in mixed reality playback.</p><div class="topic-list"><span>Object interaction</span><span>Event retrieval</span><span>Mixed reality</span></div><a class="text-link" href="https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality" target="_blank" rel="noopener">Explore the research <span aria-hidden="true">↗</span></a></div>
-      </article>
-      <div class="research-context"><span class="context-symbol" aria-hidden="true">↳</span><div><h3>Beyond playback</h3><p>My collaborative work also explores spatial affordances, shared MR spaces, and interactive virtual objects grounded in the real world.</p></div><a class="text-link" href="#publications">All publications <span aria-hidden="true">↓</span></a></div>
-    </section>
-
     <section class="section publications-section" id="publications" aria-labelledby="publications-title">
       <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">02 / Publications</p><h2 id="publications-title">Papers &amp; proceedings.</h2></div><a class="text-link" href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a></div>
+        <div class="section-heading"><div><p class="eyebrow">02 / Publications</p><h2 id="publications-title">Papers &amp; <em>proceedings.</em></h2></div><a class="text-link" href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a></div>
         <div class="publication-toolbar" hidden><div class="filters" role="group" aria-label="Filter publications"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>9</span></button><button class="filter-button" type="button" data-filter="international" aria-pressed="false">International</button><button class="filter-button" type="button" data-filter="domestic" aria-pressed="false">Domestic</button></div><p id="publication-count" role="status" aria-live="polite">9 publications</p></div>
         <div class="publication-list">
           <article class="publication" data-category="international" data-year="2026"><div class="publication-year">2026</div><div class="publication-body"><p class="venue">IEEE ISMAR 2026</p><h3>Object-Driven Event Retrieval with Assembled Object Interface for Mixed Reality Assembly Playback</h3><p class="authors"><strong>Selin Choi</strong>, Sun Ah Bae, Dooyoung Kim, and Woontack Woo</p><div class="paper-links"><a href="https://doi.org/10.1109/ISMAR70079.2026.00030" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a><a href="https://arrc.kaist.ac.kr/publications/object-driven-event-retrieval-with-assembled-object-interface-for-mixed-reality" target="_blank" rel="noopener">Research page <span aria-hidden="true">↗</span></a></div></div></article>
@@ -106,7 +120,7 @@
     </section>
 
     <section class="section container" id="about" aria-labelledby="about-title">
-      <div class="section-heading"><div><p class="eyebrow">03 / Background</p><h2 id="about-title">Research, build, share.</h2></div></div>
+      <div class="section-heading"><div><p class="eyebrow">03 / Background</p><h2 id="about-title">Research, build, <em>share.</em></h2></div></div>
       <div class="background-grid">
         <div><h3 class="column-title">Education</h3><ol class="timeline"><li><p class="date">2025 — Present</p><h4>Ph.D. in Culture Technology</h4><p>KAIST · UVR Lab</p><p class="detail">Advisor: Prof. Woontack Woo</p></li><li><p class="date">2023 — 2025</p><h4>M.S. in Culture Technology</h4><p>KAIST · UVR Lab</p><p class="detail">Thesis: Task-Centric Scene Graph-Based Recording with Breakpoints for Adaptive Virtual Reality Playback</p></li><li><p class="date">2018 — 2023</p><h4>B.S. in Software</h4><p>Kwangwoon University</p><p class="detail">Major in System Software · GPA 4.23 / 4.5</p></li></ol></div>
         <div><h3 class="column-title">Research experience</h3><ol class="timeline"><li><p class="date">2024 — Present</p><h4>MetaObject</h4><p>Researcher</p><p class="detail">Adaptive guidance for meta-object experiences using user context, task structure, and interaction data.</p></li><li><p class="date">2023</p><h4>Dynamic Digital Twin for XR Collaboration</h4><p>Researcher</p><p class="detail">XR collaboration in dynamic digital twin environments.</p></li><li><p class="date">2022</p><h4>ETRI · VR/AR Content Lab</h4><p>Winter research intern</p><p class="detail">AR test program development for traditional buildings in the H-BIM project.</p></li></ol></div>
@@ -142,7 +156,7 @@
       <div class="skills-line"><span class="eyebrow">In my toolkit</span><p>Unity · C# · C++ · Swift · Python · Xcode · Figma</p></div>
     </section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><div><p class="eyebrow">04 / Get in touch</p><h2 id="contact-title">Let's talk spatial<br>experiences.</h2><a class="contact-email" href="mailto:selin.choi@kaist.ac.kr">selin.choi@kaist.ac.kr <span aria-hidden="true">↗</span></a></div><div class="contact-links"><a href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a><a href="https://github.com/seriiin" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><a href="https://uvrlab.org/" target="_blank" rel="noopener">KAIST UVR Lab <span aria-hidden="true">↗</span></a></div></div></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><div><p class="eyebrow">04 / Get in touch</p><h2 id="contact-title">Let's talk<br><em>spatial experiences.</em></h2><a class="contact-email" href="mailto:selin.choi@kaist.ac.kr">selin.choi@kaist.ac.kr <span aria-hidden="true">↗</span></a></div><div class="contact-links"><a href="https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a><a href="https://github.com/seriiin" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><a href="https://uvrlab.org/" target="_blank" rel="noopener">KAIST UVR Lab <span aria-hidden="true">↗</span></a></div></div></section>
   </main>
   <footer class="site-footer container"><p>© <span id="copyright-year">2026</span> Selin Choi</p><p>AR / VR · Spatial computing</p><a href="#home">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>

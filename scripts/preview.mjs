@@ -12,6 +12,7 @@ const mimeTypes = {
   ".svg": "image/svg+xml",
   ".jpg": "image/jpeg",
   ".png": "image/png",
+  ".woff2": "font/woff2",
   ".pdf": "application/pdf"
 };
 
