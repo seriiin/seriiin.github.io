@@ -35,7 +35,7 @@ CV에 기재된 GitHub 아이디 `seriiin`을 기준으로 안내합니다.
 
 ## 수정할 곳
 
-- `index.html`: 소개, 대표 연구, 논문, 학력·경력, 참여 연구과제·연구비, 수상·장학금, 연락처. Monash·ETRI는 경력, MetaObject·Digital Twin과 NRF 연구장려금은 연구과제·연구비에 배치합니다. 논문을 추가할 때 `data-category="international"` 또는 `"domestic"`을 설정하면 필터에 반영됩니다. 전체 편수는 JavaScript가 계산합니다.
+- `index.html`: 소개, 대표 연구, 논문, Academic Profile, Projects, 연락처. Academic Profile에는 학력·경력·수상·장학금·Teaching을, Projects에는 참여 연구과제·NRF 연구장려금과 다하자를 배치합니다. 논문을 추가할 때 `data-category="international"` 또는 `"domestic"`을 설정하면 필터에 반영됩니다. 전체 편수는 JavaScript가 계산합니다.
 - `styles.css`: 색, 글꼴, 간격, 화면 크기별 배치.
 - `main.js`: 모바일 메뉴, 논문 필터, 현재 섹션 표시, 헤더 XR 버디의 시선·인사 동작.
 - `assets/`: 프로필 사진, 대표 논문 이미지, 다하자 아이콘, 파비콘. `assets/fonts/`에는 Manrope·Instrument Serif 글꼴과 라이선스를 포함합니다.

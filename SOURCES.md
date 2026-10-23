@@ -59,6 +59,8 @@ The owner subsequently requested a quieter introduction. The hero now leads with
 
 At the owner's request, section gaps, card padding, and list-row spacing were tightened further. Research cards use natural title wrapping and content-driven heights. Font sizes and line heights are retained for readability.
 
+Academic Profile groups education, research appointments, awards/scholarships, teaching, and tools. A separate Projects section contains funded research and project participation, followed by the independently developed Dahaja app. This distinguishes the researcher's academic history from project work without repeating entries.
+
 Self-hosted Latin WOFF2 fonts were downloaded from Google Fonts on 2026-10-23: Manrope (variable weights 400–800) and Instrument Serif (regular and italic). Both use the SIL Open Font License 1.1; the original licenses are included in `assets/fonts/Manrope-OFL.txt` and `assets/fonts/InstrumentSerif-OFL.txt`. Official font sources: https://github.com/google/fonts/tree/main/ofl/manrope and https://github.com/google/fonts/tree/main/ofl/instrumentserif. Korean and other unsupported characters use the system font fallback. The webpage makes no requests to an external font service.
 
 ## XR buddy mark
