@@ -189,7 +189,7 @@ if (buddy && buddyStatus) {
   reducedMotion.addEventListener("change", resetLook);
   finePointer.addEventListener("change", resetLook);
 
-  // A brief visual response to other controls; their native actions still run.
+  // Brief feedback at any clicked point; native actions still run.
   const laser = document.querySelector("#click-laser");
   if (laser) {
     const eyes = [...buddy.querySelectorAll(".buddy-pupil")];
@@ -228,13 +228,17 @@ if (buddy && buddyStatus) {
         clearLaser();
         return;
       }
-      if (!control || control.matches(':disabled, [aria-disabled="true"]')) return;
+      if (control?.matches(':disabled, [aria-disabled="true"]')) return;
       clearLaser();
       if (reducedMotion.matches || document.hidden || event.button > 0) return;
-      const bounds = control.getBoundingClientRect();
-      laserPoint = event.detail > 0
-        ? { x: event.clientX, y: event.clientY }
-        : { x: bounds.left + bounds.width / 2, y: bounds.top + bounds.height / 2 };
+      if (event.detail > 0) {
+        laserPoint = { x: event.clientX, y: event.clientY };
+      } else if (control) {
+        const bounds = control.getBoundingClientRect();
+        laserPoint = { x: bounds.left + bounds.width / 2, y: bounds.top + bounds.height / 2 };
+      } else {
+        return;
+      }
       target.setAttribute("transform", `translate(${laserPoint.x} ${laserPoint.y})`);
       drawLaser();
       // Flush the removed animation so another quick click restarts the burst.
