@@ -45,6 +45,8 @@ On 2026-10-23, the owner supplied two further videos and requested a gallery. Th
 
 All original files remain unchanged. The three demos are grouped under Demo gallery within Projects, separately from the independently developed Dahaja app. The layout uses three columns on larger screens, two on intermediate screens, and one on narrow screens. Each video uses native controls, inline playback, `preload="none"`, and no autoplay, with MP4 metadata at the start. Starting any research or gallery video pauses the others. The five videos' local serving and range requests, the new complete video/audio streams, poster dimensions, and gallery cross-links were checked. Actual browser rendering/playback could not be checked because no browser was connected.
 
+The owner subsequently confirmed GCT600 as the course code for the 2023 Augmented Reality Project demo. Both course demos now use the same gallery label structure: "2023 · Course project · GCT501" for MINIEMO and "2023 · Course project · GCT600" for Virtual Consumable Resources. The Korean course-name annotation was removed from MINIEMO's gallery label at the owner's request.
+
 ## Verification scope
 
 JavaScript syntax, HTML structure/local links, image metadata, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
