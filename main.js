@@ -188,5 +188,67 @@ if (buddy && buddyStatus) {
   });
   reducedMotion.addEventListener("change", resetLook);
   finePointer.addEventListener("change", resetLook);
+
+  // A brief visual response to other controls; their native actions still run.
+  const laser = document.querySelector("#click-laser");
+  if (laser) {
+    const eyes = [...buddy.querySelectorAll(".buddy-pupil")];
+    const rays = [...laser.querySelectorAll("[data-laser-eye]")].map((ray) => [...ray.querySelectorAll("path")]);
+    const target = laser.querySelector(".click-laser-target");
+    let laserFrame = null;
+    let laserPoint = null;
+    let laserStarted = 0;
+    const clearLaser = () => {
+      if (laserFrame !== null) window.cancelAnimationFrame(laserFrame);
+      laserFrame = null;
+      laserPoint = null;
+      laser.classList.remove("is-active");
+    };
+    const drawLaser = () => {
+      eyes.forEach((eye, index) => {
+        const bounds = eye.getBoundingClientRect();
+        const x = bounds.left + bounds.width / 2;
+        const y = bounds.top + bounds.height / 2;
+        const path = `M${x} ${y}L${laserPoint.x} ${laserPoint.y}`;
+        rays[index].forEach((ray) => ray.setAttribute("d", path));
+      });
+    };
+    const animateLaser = (time) => {
+      laserFrame = null;
+      if (!laserPoint || document.hidden || time - laserStarted >= 480) {
+        clearLaser();
+        return;
+      }
+      drawLaser();
+      laserFrame = window.requestAnimationFrame(animateLaser);
+    };
+    document.addEventListener("click", (event) => {
+      const control = event.target.closest?.('a[href], button, summary, video, [role="button"]');
+      if (control === buddy) {
+        clearLaser();
+        return;
+      }
+      if (!control || control.matches(':disabled, [aria-disabled="true"]')) return;
+      clearLaser();
+      if (reducedMotion.matches || document.hidden || event.button > 0) return;
+      const bounds = control.getBoundingClientRect();
+      laserPoint = event.detail > 0
+        ? { x: event.clientX, y: event.clientY }
+        : { x: bounds.left + bounds.width / 2, y: bounds.top + bounds.height / 2 };
+      target.setAttribute("transform", `translate(${laserPoint.x} ${laserPoint.y})`);
+      drawLaser();
+      // Flush the removed animation so another quick click restarts the burst.
+      void laser.getBoundingClientRect();
+      laser.classList.add("is-active");
+      laserStarted = window.performance.now();
+      laserFrame = window.requestAnimationFrame(animateLaser);
+    }, { capture: true });
+    reducedMotion.addEventListener("change", clearLaser);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) clearLaser();
+    });
+    window.addEventListener("blur", clearLaser);
+    window.addEventListener("resize", clearLaser);
+  }
   buddy.disabled = false;
 }

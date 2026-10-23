@@ -93,6 +93,8 @@ At the owner's request, the character's gaze follows mouse movement anywhere on 
 
 The header uses its original transparent 48-pixel button and illustration at all screen sizes, with a 10-pixel gap before the name. The colored badge background, border, yellow offset shadow, and size enlargement were removed at the owner's request. The header height, page-wide gaze, and click greeting are preserved, with no automatic attention animation.
 
+At the owner's subsequent request, clicks on other interactive controls trigger a brief sky-blue eye-laser effect from the header character to the clicked viewport point. The character button retains its existing wink and greeting. A decorative, pointer-transparent fixed SVG contains two rays and a small impact mark; the rays use the actual pupil bounds and follow eye movement during the short burst. Keyboard activation aims at the control's center. Rapid activations replace the current burst, and completion, blur, resize, hidden tabs, or reduced-motion preferences clear it. Native link, button, filter, video, and portrait-flip actions are not intercepted. No laser graphics were added to the favicon or photographs.
+
 ## Profile photograph
 
 The owner supplied `2222.jpg` on 2026-10-23 and requested it as the default profile photo, with a click flipping to the previous photo. The supplied 2362×2953 JPEG (4,443,979 bytes) was resized and re-encoded for the web as `assets/selin-choi-studio.jpg` (1000×1250, 145,046 bytes). The source file is unchanged. The existing `assets/selin-choi.jpg` is unchanged and is now the reverse side. Both photos are displayed within the existing responsive 3:4 frame using CSS object-fit.

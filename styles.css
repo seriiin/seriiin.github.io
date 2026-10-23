@@ -44,6 +44,20 @@ strong { font-weight: 700; }
 .is-greeting .buddy-eye-right { animation: buddy-wink .75s ease; }
 @keyframes buddy-bob { 0%, 100% { transform: translateY(0) rotate(0); } 40% { transform: translateY(-3px) rotate(-5deg); } 70% { transform: translateY(-1px) rotate(3deg); } }
 @keyframes buddy-wink { 0%, 70%, 100% { transform: scaleY(1); } 25%, 50% { transform: scaleY(.08); } }
+.click-laser { position: fixed; inset: 0; z-index: 50; display: block; width: 100%; height: 100%; overflow: hidden; pointer-events: none; visibility: hidden; opacity: 0; fill: none; stroke-linecap: round; }
+.click-laser.is-active { visibility: visible; animation: laser-flash .46s ease-out both; }
+.click-laser [data-laser-eye] path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.click-laser.is-active [data-laser-eye] path { animation: laser-travel .46s ease-out both; }
+.laser-glow { stroke: var(--palette-sky); stroke-width: 8; opacity: .2; }
+.laser-beam { stroke: var(--palette-sky); stroke-width: 3; }
+.laser-core { stroke: white; stroke-width: 1; }
+.laser-ring, .laser-spark { stroke: var(--palette-sky); stroke-width: 1.5; }
+.laser-dot { fill: var(--palette-yellow); }
+.click-laser-impact { transform-box: fill-box; transform-origin: center; opacity: 0; }
+.click-laser.is-active .click-laser-impact { animation: laser-impact .37s .08s ease-out both; }
+@keyframes laser-travel { 0% { stroke-dashoffset: 1; } 25%, 100% { stroke-dashoffset: 0; } }
+@keyframes laser-flash { 0% { opacity: 0; } 12%, 50% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes laser-impact { 0% { opacity: 0; transform: scale(.4); } 25% { opacity: 1; } 100% { opacity: 0; transform: scale(1.6); } }
 nav { display: flex; align-items: center; gap: 3px; font-size: 12px; font-weight: 600; }
 nav a { padding: 11px 12px; transition: color .2s; }
 nav a:hover, nav a[aria-current="location"] { color: var(--blue); text-decoration: underline; text-decoration-color: var(--palette-sky); }
@@ -352,11 +366,12 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .click-laser { display: none !important; }
   .buddy-body, .buddy-pupil { transform: none !important; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 @media print {
-  .site-header, .hero-actions, .research-tags, .publication-toolbar, .contact-section, .site-footer, .paper-links, .section-heading > a, .research-video, .demo-card video, .award-demo-link { display: none !important; }
+  .site-header, .hero-actions, .research-tags, .publication-toolbar, .contact-section, .site-footer, .paper-links, .section-heading > a, .research-video, .demo-card video, .award-demo-link, .click-laser { display: none !important; }
   body { background: white; font-size: 11pt; }
   .container { width: 100%; }
   .hero { grid-template-columns: minmax(0,1fr) 110px; gap: 30px; padding-block: 10px 25px; }
