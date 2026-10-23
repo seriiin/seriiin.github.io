@@ -1,5 +1,6 @@
 import http from "node:http";
-import { readFile } from "node:fs/promises";
+import { stat } from "node:fs/promises";
+import { createReadStream } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -13,6 +14,7 @@ const mimeTypes = {
   ".jpg": "image/jpeg",
   ".png": "image/png",
   ".woff2": "font/woff2",
+  ".mp4": "video/mp4",
   ".pdf": "application/pdf"
 };
 
@@ -30,13 +32,57 @@ const server = http.createServer(async (request, response) => {
       response.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
       return;
     }
-    const body = await readFile(filename);
-    response.writeHead(200, {
+    const file = await stat(filename);
+    if (!file.isFile()) {
+      response.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
+      return;
+    }
+    const headers = {
       "Content-Type": mimeTypes[path.extname(filename)],
-      "Content-Length": body.length,
+      "Accept-Ranges": "bytes",
       "Cache-Control": "no-cache"
-    });
-    response.end(request.method === "HEAD" ? undefined : body);
+    };
+    let start = 0;
+    let end = file.size - 1;
+    let status = 200;
+    if (request.headers.range) {
+      const range = /^bytes=(\d*)-(\d*)$/.exec(request.headers.range);
+      const rejectRange = () => response.writeHead(416, {
+        ...headers, "Content-Range": `bytes */${file.size}`, "Content-Length": 0
+      }).end();
+      if (!range || (!range[1] && !range[2]) || !file.size) {
+        rejectRange();
+        return;
+      }
+      const first = Number(range[1]);
+      const last = Number(range[2]);
+      if (!Number.isSafeInteger(first) || !Number.isSafeInteger(last)) {
+        rejectRange();
+        return;
+      }
+      if (!range[1]) {
+        start = Math.max(0, file.size - last);
+      } else {
+        start = first;
+        if (range[2]) end = Math.min(last, end);
+      }
+      if (start > end || start >= file.size) {
+        rejectRange();
+        return;
+      }
+      status = 206;
+      headers["Content-Range"] = `bytes ${start}-${end}/${file.size}`;
+    }
+    headers["Content-Length"] = file.size ? end - start + 1 : 0;
+    response.writeHead(status, headers);
+    if (request.method === "HEAD" || !file.size) {
+      response.end();
+      return;
+    }
+    const stream = createReadStream(filename, { start, end });
+    stream.on("error", () => response.destroy());
+    response.on("close", () => stream.destroy());
+    stream.pipe(response);
   } catch {
     response.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
   }

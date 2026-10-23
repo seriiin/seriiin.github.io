@@ -79,6 +79,21 @@ if ("IntersectionObserver" in window) {
 const year = document.querySelector("#copyright-year");
 if (year) year.textContent = String(new Date().getFullYear());
 
+const videoPanels = [...document.querySelectorAll(".research-video")];
+const researchVideos = videoPanels.map((panel) => panel.querySelector("video")).filter(Boolean);
+videoPanels.forEach((panel) => {
+  const video = panel.querySelector("video");
+  if (!video) return;
+  panel.addEventListener("toggle", () => {
+    if (!panel.open) video.pause();
+  });
+  video.addEventListener("play", () => {
+    researchVideos.forEach((other) => {
+      if (other !== video) other.pause();
+    });
+  });
+});
+
 // A small, user-triggered greeting; no idle animation or page-wide tracking.
 const buddy = document.querySelector(".buddy-button");
 const buddyStatus = document.querySelector("#buddy-status");

@@ -21,6 +21,15 @@ Prepared on 2026-10-22 (Asia/Seoul). GitHub Pages repository: https://github.com
 
 Images show the owner's profile and coauthored research. Images and papers retain their respective rights; no general redistribution license is asserted. No fabricated demo video, code repository, publication metric, or testimonial was added.
 
+## Owner-provided research videos
+
+The owner identified `2026VR/시퀀스 01.mp4` as the Task Breakpoint Generation video and `2026 ISMAR/ISMAR/Video.mp4` as the Object-Driven Event Retrieval video. The original files remain unchanged.
+
+- `assets/videos/task-breakpoint.mp4`: full approximately 83-second recording, converted from 2560×1440 H.264/AAC (148,887,317 bytes) to 1920×1080 H.264/AAC (17,166,667 bytes) for the web. Audio is retained. Poster extracted at 8 seconds.
+- `assets/videos/object-driven.mp4`: full approximately 64-second recording, retaining the original 1280×720 H.264/AAC streams without re-encoding (12,330,713 bytes). Poster extracted at 30 seconds.
+
+Both MP4 files have their metadata moved to the start for progressive playback. Each appears in a native expandable video player with `preload="none"`, inline playback, and no autoplay. Both complete video and audio streams were decoded to check for errors; actual browser playback remains unverified in this environment.
+
 ## Verification scope
 
 JavaScript syntax, HTML structure/local links, image metadata, publication counts and categories, and local HTTP responses are checked during handoff. A supported browser was not available, so visual rendering, responsive layouts, and interactive behavior remain unverified in a browser.
