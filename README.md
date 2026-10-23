@@ -46,6 +46,8 @@ CV에 기재된 GitHub 아이디 `seriiin`을 기준으로 안내합니다.
 
 ## 확인
 
+공유용 썸네일은 `assets/social-preview.png` (1200×630)이며, 벡터 원본은 `assets/social-preview.svg`입니다. 하늘색 배경에 헤더 캐릭터와 이름·AR/VR Researcher를 넣었습니다. `index.html`의 Open Graph·Twitter 카드 메타데이터는 `https://selinchoi.com/assets/social-preview.png`를 가리킵니다.
+
 헤더 캐릭터를 누르면 기존 윙크·인사가 나옵니다. 그 외에는 빈 공간을 포함해 페이지 어디를 클릭해도 캐릭터의 실제 눈 위치에서 클릭 지점으로 하늘색 레이저가 약 0.5초 뻗고, 끝에 작은 빛이 나타납니다. 키보드로 컨트롤을 활성화하면 해당 컨트롤 중앙을 향합니다. 효과는 클릭을 가로막지 않으며, 동작 줄이기 설정에서는 생략합니다.
 
 ```powershell
