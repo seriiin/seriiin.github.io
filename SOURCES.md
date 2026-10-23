@@ -6,6 +6,7 @@ Prepared on 2026-10-22 (Asia/Seoul). GitHub Pages repository: https://github.com
 
 - `Awesome_CV__1_ (2).pdf`, three pages, dated October 22, 2026. Source for education, professional email, research experience, projects, publications, awards, teaching, and tools. The PDF was removed from the website at the owner's request; it remains a source for the biography content.
 - Google Scholar profile: https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&hl=ko. Direct automated access failed. The profile is linked; citation counts and h-index were not inferred or reproduced.
+- LinkedIn profile: https://www.linkedin.com/in/selinchoi/. Supplied by the owner and added to the Get in touch links.
 - The owner confirmed a visiting research stay at Monash University from June to August 2026, hosted by Prof. Tim Dwyer. The website lists this as Visiting Researcher under Research experience.
 - The owner clarified that MetaObject and Dynamic Digital Twin are research projects they participated in. They are listed as project participation under Research Projects & Funding, separately from the Monash visit and ETRI internship. ETRI's Winter Research Intern title and January–February 2022 dates follow the supplied CV. The undergraduate overall GPA of 4.23/4.5 is retained at the owner's request.
 - Owner confirmed that **Object-Driven Event Retrieval…** should use **IEEE ISMAR 2026**, as listed by KAIST ARRC, rather than TVCG 2026 (in press), as listed in the supplied CV. The original source CV is unchanged.
