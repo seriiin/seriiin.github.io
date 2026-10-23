@@ -147,6 +147,23 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
 .award-row p { font-size: 13px; }
 .award-row p span { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
 .award-star { margin-left: auto; color: var(--palette-pink); font-size: 29px; }
+.independent-projects { margin-top: 42px; }
+.product-project { display: grid; grid-template-columns: minmax(0,1fr) 230px; margin-top: 20px; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: var(--white); }
+.product-main { min-width: 0; padding: 28px; }
+.product-heading { display: flex; align-items: center; gap: 19px; }
+.product-icon { width: 74px; height: 74px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 16px; }
+.product-heading .eyebrow { font-size: 9px; letter-spacing: 1px; margin-bottom: 6px; }
+.product-heading h4 { font-size: 27px; font-weight: 500; letter-spacing: -.5px; }
+.product-heading h4 span { display: inline-block; margin-left: 10px; color: var(--muted); font-size: 13px; font-weight: 400; letter-spacing: 0; }
+.product-category { color: var(--muted); font-size: 12px; margin-top: 5px; }
+.product-summary { color: var(--muted); font-size: 13px; line-height: 1.85; margin-top: 20px; max-width: 680px; }
+.product-roles { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; margin: 17px 0 0; padding: 0; }
+.product-roles li { padding: 4px 9px; color: var(--palette-navy); background: var(--soft); border-radius: 3px; font-size: 10px; }
+.product-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; margin-top: 22px; }
+.product-release { color: var(--muted); font-size: 10px; }
+.product-impact { display: flex; align-items: center; justify-content: center; padding: 32px 24px; text-align: center; background: var(--palette-navy); color: var(--white); }
+.product-impact strong { display: block; color: var(--palette-yellow); font-size: 43px; font-weight: 500; line-height: 1.15; letter-spacing: -1.6px; }
+.product-impact span { display: block; margin-top: 10px; color: #e6e9ff; font-size: 12px; letter-spacing: .5px; }
 .practice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 51px; }
 .practice-grid h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; letter-spacing: -.3px; margin-block: 10px 13px; }
 .practice-grid > div > p:last-child { color: var(--muted); font-size: 13px; }
@@ -324,6 +341,18 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
   .award-row p { font-size: 12px; }
   .award-row p span { font-size: 10px; }
   .award-row > span:first-child { min-width: 44px; font-size: 10px; }
+  .independent-projects { margin-top: 32px; }
+  .product-project { grid-template-columns: 1fr; }
+  .product-main { padding: 21px; }
+  .product-heading { gap: 14px; }
+  .product-icon { width: 61px; height: 61px; border-radius: 13px; }
+  .product-heading h4 { font-size: 25px; }
+  .product-heading h4 span { font-size: 12px; margin-left: 7px; }
+  .product-category { font-size: 11px; }
+  .product-impact { padding: 22px; }
+  .product-impact p { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: 12px; }
+  .product-impact strong { font-size: 36px; }
+  .product-impact span { margin-top: 0; }
   .practice-grid { margin-top: 36px; }
   .skills-line { gap: 8px; }
   .skills-line .eyebrow { width: 100%; }
@@ -361,7 +390,7 @@ h2 { font-size: clamp(28px, 3.2vw, 38px); letter-spacing: -1.1px; font-weight: 5
   h1 { font-size: 36pt; }
   .hero-statement { font-size: 20pt; }
   .section { padding-block: 25px; }
-  .publication, .research-feature, .timeline li, .award-row, .funding-entry { break-inside: avoid; }
+  .publication, .research-feature, .timeline li, .award-row, .funding-entry, .product-project { break-inside: avoid; }
   .research-description { padding: 15px; }
   .research-image { min-height: 0; padding: 12px; }
   .publication { padding-block: 15px; }

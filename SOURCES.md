@@ -32,3 +32,7 @@ The research constellation is an original interactive illustration of six resear
 ## Reference palette
 
 The owner supplied a six-swatch palette image. Its pink, blush, yellow, lime, sky blue, and navy tones are interpreted as #e91b63, #efb4cf, #f9e975, #92c43d, #539ed4, and #222d82. Styles, the research constellation, fallback illustration, favicon, and browser theme use this palette, with neutral tints and a darker text shade for contrast.
+
+## Dahaja independent project
+
+On 2026-10-23, the owner confirmed that Dahaja's product planning, design, development, and App Store release were all handled independently. The 65,000+ download milestone is from the supplied CV dated 2026-10-22. It is not a user-count or ratings statistic. The official Apple listing confirms the app name, developer Selin Choi, and first release in October 2020: https://apps.apple.com/kr/app/%EB%8B%A4%ED%95%98%EC%9E%90/id1537356258. Apple lookup API: https://itunes.apple.com/lookup?id=1537356258&country=kr. Official app artwork downloaded to `assets/dahaja-icon.jpg` from https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/17/ba/ad/17baad78-1c9e-4887-1dd9-3ef7da44c820/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg.
