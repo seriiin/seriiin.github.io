@@ -62,6 +62,15 @@ h1 { margin-block: 10px 8px; font-size: 56px; line-height: 1.15; letter-spacing:
 .portrait-frame { display: block; overflow: hidden; border-radius: 12px; background: var(--soft); }
 .portrait { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 .portrait-block figcaption { margin-top: 10px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.portrait-flip { position: relative; width: 100%; aspect-ratio: 3 / 4; padding: 0; border: 0; overflow: visible; background: transparent; color: inherit; perspective: 1000px; touch-action: manipulation; }
+.portrait-flip:disabled { cursor: default; }
+.portrait-card { position: absolute; inset: 0; display: block; border-radius: inherit; transform-style: preserve-3d; transition: transform .65s cubic-bezier(.2,.65,.3,1); }
+.portrait-face { position: absolute; inset: 0; display: block; overflow: hidden; border-radius: inherit; background: var(--soft); -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.portrait-face .portrait { height: 100%; }
+.portrait-back { transform: rotateY(180deg); }
+.portrait-flip[aria-pressed="true"] .portrait-card { transform: rotateY(180deg); }
+.portrait-hint { display: block; margin-top: 4px; color: var(--blue); }
+.portrait-hint span { display: inline-block; margin-left: 4px; font-size: 13px; vertical-align: middle; }
 .intro, .affiliation { max-width: 640px; color: var(--muted); font-size: 15px; line-height: 1.85; }
 .intro { margin-top: 14px; }
 .affiliation { margin-top: 5px; font-size: 13px; }
@@ -352,6 +361,8 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
   .hero { grid-template-columns: minmax(0,1fr) 110px; gap: 30px; padding-block: 10px 25px; }
   h1 { font-size: 30pt; }
   .portrait-frame { width: 100%; border-radius: 0; }
+  .portrait-card { transform: none !important; }
+  .portrait-back, .portrait-hint { display: none !important; }
   .section { padding-block: 30px; }
   #research { padding-top: 30px; }
   h2 { font-size: 27pt; }
