@@ -7,9 +7,11 @@ Prepared on 2026-10-22 (Asia/Seoul). GitHub Pages repository: https://github.com
 - `Awesome_CV__1_ (2).pdf`, three pages, dated October 22, 2026. Source for education, professional email, research experience, projects, publications, awards, teaching, and tools. The PDF was removed from the website at the owner's request; it remains a source for the biography content.
 - Google Scholar profile: https://scholar.google.co.kr/citations?user=-P-q8XwAAAAJ&hl=ko. Direct automated access failed. The profile is linked; citation counts and h-index were not inferred or reproduced.
 - The owner confirmed a visiting research stay at Monash University from June to August 2026, hosted by Prof. Tim Dwyer. The website lists this as Visiting Researcher under Research experience.
+- The owner clarified that MetaObject and Dynamic Digital Twin are research projects they participated in. They are listed as project participation under Research Projects & Funding, separately from the Monash visit and ETRI internship. ETRI's Winter Research Intern title and January–February 2022 dates follow the supplied CV. The undergraduate overall GPA of 4.23/4.5 is retained at the owner's request.
 - Owner confirmed that **Object-Driven Event Retrieval…** should use **IEEE ISMAR 2026**, as listed by KAIST ARRC, rather than TVCG 2026 (in press), as listed in the supplied CV. The original source CV is unchanged.
 
 - On 2026-10-22, the owner reported selection in 2026 for 박사과정생연구장려금지원, funded by 한국연구재단. The supplied English project title is "AI-Driven Learner-Adaptive Spatial Experience Playback Framework in AR/VR Environments". The website uses the descriptive English label "Doctoral Research Grant" and retains the supplied Korean program name. The funder's English name, National Research Foundation of Korea (NRF), is confirmed by https://eng.nrf.re.kr/.
+- The 2026 official IRIS call presents 박사과정생연구장려금지원 as a call for new research projects: https://www.iris.go.kr/contents/retrieveBsnsAncmView.do?ancmId=020279. The portfolio therefore places the grant in Research Projects & Funding. This is an editorial classification based on the program's research-funding purpose; the owner's existing Government Scholarship remains in Awards & Scholarships. No grant amount, duration, or principal-investigator designation is inferred.
 
 ## Verified public sources
 
@@ -52,6 +54,8 @@ The owner confirmed the course codes and terms: 3D Interaction Design (GCT555), 
 ## Typography and layout reference
 
 The owner supplied https://grandecharte.co/ as a reference for typography, buttons, and layout. The portfolio interprets that direction through oversized headings, contrasting serif italics, pill buttons with circular arrows, generous spacing, and alternating research layouts. The existing six-color palette and factual content are retained. No object imagery or proprietary fonts from the reference are used.
+
+The owner subsequently requested a quieter introduction. The hero now leads with the owner's name, affiliation, and a short research description; its former slogan is removed, headings are smaller, and the palette, rounded buttons, research cards, and buddy mark remain.
 
 Self-hosted Latin WOFF2 fonts were downloaded from Google Fonts on 2026-10-23: Manrope (variable weights 400–800) and Instrument Serif (regular and italic). Both use the SIL Open Font License 1.1; the original licenses are included in `assets/fonts/Manrope-OFL.txt` and `assets/fonts/InstrumentSerif-OFL.txt`. Official font sources: https://github.com/google/fonts/tree/main/ofl/manrope and https://github.com/google/fonts/tree/main/ofl/instrumentserif. Korean and other unsupported characters use the system font fallback. The webpage makes no requests to an external font service.
 
