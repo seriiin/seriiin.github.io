@@ -29,12 +29,13 @@ strong { font-weight: 700; }
 .skip-link:focus { top: 12px; }
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(250,250,247,.97); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 28px; }
-.brand { display: flex; align-items: center; gap: 10px; }
+.brand { display: flex; align-items: center; gap: 12px; }
 .wordmark { display: inline-flex; align-items: center; font-size: 16px; font-weight: 700; white-space: nowrap; letter-spacing: -.5px; }
 .wordmark:hover { text-decoration: none; }
-.buddy-button { position: relative; display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--ink); touch-action: manipulation; }
+.buddy-button { position: relative; display: grid; place-items: center; flex-shrink: 0; width: 64px; height: 64px; padding: 0; border: 1px solid var(--palette-sky); border-radius: 50%; background: var(--surface-sky); box-shadow: 3px 3px 0 var(--palette-yellow); color: var(--ink); touch-action: manipulation; transition: background .2s, border-color .2s; }
 .buddy-button:disabled { cursor: default; }
-.buddy { display: block; width: 48px; height: 48px; overflow: visible; }
+.buddy-button:not(:disabled):hover, .buddy-button:focus-visible { background: var(--surface-yellow); border-color: var(--blue); }
+.buddy { display: block; width: 58px; height: 58px; overflow: visible; }
 .buddy-body { transform-box: fill-box; transform-origin: center 80%; transform: rotate(var(--buddy-tilt, 0deg)); transition: transform .16s ease-out; }
 .buddy-pupil { transform: translate(var(--buddy-x, 0px), var(--buddy-y, 0px)); transition: transform .12s ease-out; }
 .buddy-eye { transform-box: fill-box; transform-origin: center; }
@@ -221,6 +222,8 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
   html { scroll-padding-top: 84px; }
   .container { width: calc(100% - 48px); }
   .header-inner { min-height: 68px; flex-wrap: wrap; gap: 0; }
+  .buddy-button { width: 56px; height: 56px; }
+  .buddy { width: 52px; height: 52px; }
   .menu-toggle:not([hidden]) { display: inline-flex; }
   nav { width: 100%; flex-wrap: wrap; gap: 6px; padding-block: 3px 16px; }
   .js nav { display: none; }
