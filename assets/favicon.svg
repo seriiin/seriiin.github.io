@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <g class="buddy-body" stroke="#161616" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M35 6C21 4 11 13 11 28c0 11-2 19-5 27 6 5 13 5 19 0 6 3 12 3 18 0 4 4 10 4 15 1-4-7-4-15-4-27C54 15 47 6 35 6Z" fill="#161616"/>
-    <path d="M42 16c-5 6-14 5-20 13-3 4-3 8-2 12 2 8 7 13 14 13 9-1 14-9 13-20 0-8-2-14-5-18Z" fill="#fff"/>
-    <path d="M34 11c-10 1-17 9-18 20m-1 13c-1 4-2 7-4 10m37-34c3 8 3 17 2 25" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <path d="M32 8C24 4 15 9 11 18 7 27 7 39 11 48c2 5 6 8 11 8l5-5c4 3 9 3 13 0l3 5c5-1 9-5 11-12 3-9 1-21-3-28C46 8 38 4 32 8Z" fill="#161616"/>
+    <path d="M32 17c-5 0-9 4-11 11-2 4-2 9-1 13 2 8 7 13 14 13 8-1 13-9 13-18 0-4-1-8-4-10-3-5-7-9-11-9Z" fill="#fff"/>
+    <path d="M30 12c-8 0-15 9-17 19m21-19c8 0 14 8 16 17m-37 7c0 7 2 13 6 15m32-17c1 7-1 13-5 17" fill="none" stroke="#fff" stroke-width="1.4"/>
+    <path d="M31 18c-1 4-3 7-5 9m7-9c1 4 3 7 6 9" fill="none" stroke-width="1.5"/>
     <g class="buddy-eye buddy-eye-left" fill="#161616" stroke="none"><ellipse class="buddy-pupil" cx="27" cy="33" rx="2.15" ry="3.1"/></g>
     <g class="buddy-eye buddy-eye-right" fill="#161616" stroke="none"><ellipse class="buddy-pupil" cx="40" cy="32" rx="2.15" ry="3.1"/></g>
     <path d="m33 38 1 2-2 .6m-5 3c3 4 8 4 12-1" fill="none" stroke-width="2.5"/>
