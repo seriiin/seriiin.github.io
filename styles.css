@@ -170,7 +170,6 @@ h2 { font-size: 32px; letter-spacing: -.035em; font-weight: 600; line-height: 1.
 .funding-program span { display: block; color: var(--muted); font-size: 11px; font-weight: 400; margin-top: 4px; }
 .funding-details h4 { font-size: 21px; font-weight: 500; line-height: 1.45; letter-spacing: -.5px; margin-top: 12px; overflow-wrap: anywhere; }
 .funding-funder { color: var(--muted); font-size: 12px; margin-top: 10px; }
-.funding-funder a { text-decoration: underline; text-decoration-color: #b4c5da; }
 .product-project { display: grid; grid-template-columns: minmax(0,1fr) 30%; padding-block: 20px; border-bottom: 1px solid var(--line); }
 .product-main { min-width: 0; padding-right: 28px; }
 .product-heading { display: flex; align-items: center; gap: 16px; }
