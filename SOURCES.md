@@ -54,13 +54,15 @@ The owner confirmed the course codes and terms: 3D Interaction Design (GCT555), 
 
 ## Typography and layout reference
 
-The owner supplied https://grandecharte.co/ as a reference for typography, buttons, and layout. The portfolio interprets that direction through oversized headings, contrasting serif italics, pill buttons with circular arrows, generous spacing, and alternating research layouts. The existing six-color palette and factual content are retained. No object imagery or proprietary fonts from the reference are used.
+The owner supplied https://grandecharte.co/ as a reference for typography, buttons, and layout. Subsequent requests refined the design toward a compact, quieter research portfolio. No object imagery or proprietary fonts from the reference are used.
 
-The owner subsequently requested a quieter introduction. The hero now leads with the owner's name, affiliation, and a short research description; its former slogan is removed, headings are smaller, and the palette, rounded buttons, research cards, and buddy mark remain.
+The hero leads with the owner's name, affiliation, and a short research description; its former slogan is removed. The supplied palette and interactive buddy mark are retained.
 
 At the owner's request, section gaps, card padding, and list-row spacing were tightened further. Research cards use natural title wrapping and content-driven heights. Font sizes and line heights are retained for readability.
 
 Academic Profile groups education, research appointments, awards/scholarships, teaching, and tools. A separate Projects section contains funded research and project participation, followed by the independently developed Dahaja app. This distinguishes the researcher's academic history from project work without repeating entries.
+
+On 2026-10-23, the owner requested a cleaner overall appearance. The design now uses a white canvas, neutral body text, blue accents, and thin section/list dividers. Colored card panels, image shadows, circular arrow frames, decorative section-number captions, and the award star were removed. Research figures share a consistent image-first layout and retain their complete intrinsic aspect ratios; topic and responsibility labels are plain text instead of bordered capsules. Primary controls retain modest rounding, with compact section headings and quieter download/funding figures. Academic/project content, dates, publication links, video controls, the host-group information, and the buddy interaction remain intact.
 
 Self-hosted Latin WOFF2 fonts were downloaded from Google Fonts on 2026-10-23: Manrope (variable weights 400–800) and Instrument Serif (regular and italic). Both use the SIL Open Font License 1.1; the original licenses are included in `assets/fonts/Manrope-OFL.txt` and `assets/fonts/InstrumentSerif-OFL.txt`. Official font sources: https://github.com/google/fonts/tree/main/ofl/manrope and https://github.com/google/fonts/tree/main/ofl/instrumentserif. Korean and other unsupported characters use the system font fallback. The webpage makes no requests to an external font service.
 
