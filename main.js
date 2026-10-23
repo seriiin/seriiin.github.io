@@ -94,29 +94,55 @@ videoPanels.forEach((panel) => {
   });
 });
 
-// A small, user-triggered greeting; no idle animation or page-wide tracking.
+// The gaze follows the mouse across the page; greetings stay user-triggered.
 const buddy = document.querySelector(".buddy-button");
 const buddyStatus = document.querySelector("#buddy-status");
 if (buddy && buddyStatus) {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   let greetingTimer;
+  let lookFrame = null;
+  let pointer = null;
   const resetLook = () => {
+    if (lookFrame !== null) window.cancelAnimationFrame(lookFrame);
+    lookFrame = null;
+    pointer = null;
     buddy.style.setProperty("--buddy-x", "0px");
     buddy.style.setProperty("--buddy-y", "0px");
     buddy.style.setProperty("--buddy-tilt", "0deg");
   };
-  buddy.addEventListener("pointermove", (event) => {
-    if (reducedMotion.matches || !finePointer.matches || event.pointerType !== "mouse") return;
+  const updateLook = () => {
+    lookFrame = null;
+    if (!pointer) return;
     const bounds = buddy.getBoundingClientRect();
-    const x = Math.max(-1, Math.min(1, (event.clientX - bounds.left) / bounds.width * 2 - 1));
-    const y = Math.max(-1, Math.min(1, (event.clientY - bounds.top) / bounds.height * 2 - 1));
-    buddy.style.setProperty("--buddy-x", `${(x * 2).toFixed(2)}px`);
-    buddy.style.setProperty("--buddy-y", `${(y * 1.5).toFixed(2)}px`);
-    buddy.style.setProperty("--buddy-tilt", `${(x * 4).toFixed(2)}deg`);
+    const dx = pointer.x - (bounds.left + bounds.width / 2);
+    const dy = pointer.y - (bounds.top + bounds.height / 2);
+    const reach = Math.max(180, Math.min(window.innerWidth, window.innerHeight) * .3);
+    const distance = Math.hypot(dx, dy, reach);
+    const x = dx / distance;
+    const y = dy / distance;
+    buddy.style.setProperty("--buddy-x", `${(x * 3).toFixed(2)}px`);
+    buddy.style.setProperty("--buddy-y", `${(y * 2.2).toFixed(2)}px`);
+    buddy.style.setProperty("--buddy-tilt", `${(x * 5).toFixed(2)}deg`);
+  };
+  document.addEventListener("pointermove", (event) => {
+    if (reducedMotion.matches || !finePointer.matches) return;
+    if (event.pointerType !== "mouse") {
+      resetLook();
+      return;
+    }
+    pointer = { x: event.clientX, y: event.clientY };
+    if (lookFrame === null) lookFrame = window.requestAnimationFrame(updateLook);
+  }, { passive: true });
+  document.addEventListener("pointerout", (event) => {
+    if (!event.relatedTarget) resetLook();
   });
-  buddy.addEventListener("pointerleave", resetLook);
-  buddy.addEventListener("pointercancel", resetLook);
+  document.addEventListener("pointercancel", resetLook);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) resetLook();
+  });
+  window.addEventListener("blur", resetLook);
+  window.addEventListener("resize", resetLook);
   buddy.addEventListener("blur", resetLook);
   buddy.addEventListener("click", () => {
     window.clearTimeout(greetingTimer);
