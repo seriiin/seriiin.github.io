@@ -3,6 +3,23 @@
 KAIST UVR Lab의 AR/VR 연구자 Selin Choi를 위한 영문 포트폴리오입니다.
 별도 빌드나 패키지 설치 없이 HTML, CSS, JavaScript 파일을 그대로 GitHub Pages에 배포할 수 있습니다.
 
+## CV PDF 다운로드
+
+첫 화면과 Academic Profile의 **Download CV · PDF** 버튼으로 `assets/Selin_Choi_CV.pdf`를 바로 다운로드합니다. JavaScript 없이도 동작하며 인쇄 창을 거치지 않습니다. PDF는 사이트의 네이비 색상, A4 2페이지 단일 단 구성, 선택 가능한 텍스트, 논문·연락처 링크를 사용합니다. 1페이지에는 학력·연구 경력·연구과제·수상·교육 활동을, 2페이지에는 논문 9편을 배치합니다. 논문 제목은 8.2pt, 저자와 학회 정보는 6.8pt와 6.6pt이며, Tools & technologies는 논문 목록 아래에 6.8pt로 표시합니다.
+
+CV에는 연구과제를 포함하고, Selected projects의 데모 3개와 Independent project는 제외합니다.
+
+사이트의 CV 관련 내용을 수정한 뒤에는 아래 명령으로 PDF를 다시 생성하고, 갱신된 `assets/Selin_Choi_CV.pdf`도 함께 배포합니다. Python과 `reportlab`, `lxml`은 문서를 다시 생성할 때만 필요합니다.
+
+```powershell
+python -m pip install reportlab lxml
+python scripts/build_cv.py
+```
+
+생성 스크립트는 `index.html`의 학력, 연구 경력, 연구과제, 논문, 수상, 교육 및 프로젝트 내용을 읽습니다. 배포용 PDF는 `assets/`에, 같은 문서의 검토용 사본은 Git에서 제외되는 `output/pdf/`에 저장합니다. 문서 하단에는 생성일 기준 월과 연도가 표시되며, 필요하면 `--updated 2026-11-12`처럼 날짜를 지정할 수 있습니다.
+
+내용이 늘어 PDF가 2페이지를 넘으면 스크립트가 오류를 표시하고 기존 검토용·배포용 PDF를 보존합니다. 배치를 조정한 뒤 다시 생성합니다.
+
 ## 로컬에서 보기
 
 `index.html`을 브라우저에서 열면 됩니다. Node.js가 설치되어 있다면 다음 명령으로 미리보기 서버를 실행할 수도 있습니다.

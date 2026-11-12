@@ -92,6 +92,9 @@ h1 { margin-block: 10px 8px; font-size: 56px; line-height: 1.15; letter-spacing:
 .button > span { flex-shrink: 0; font-size: 19px; font-weight: 400; line-height: 1; }
 .button-primary { color: var(--blue); background: transparent; }
 .button:hover, .button:focus-visible { color: var(--blue); background: var(--soft); text-decoration: none; }
+.cv-download { gap: 10px; background: var(--blue); color: var(--white); white-space: nowrap; }
+.cv-download small { padding: 2px 5px; border: 1px solid currentColor; border-radius: 3px; font-size: 9px; font-weight: 600; line-height: 1.3; }
+.cv-download svg { flex-shrink: 0; margin-left: 2px; }
 .text-link { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 600; line-height: 1.5; }
 .text-link > span { flex-shrink: 0; font-size: 17px; font-weight: 400; line-height: 1; }
 .text-link:hover { color: var(--blue); text-decoration: underline; text-decoration-color: var(--palette-sky); }
